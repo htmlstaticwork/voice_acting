@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | VoxTalent</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#4f46e5', dark: '#4338ca' },
+                        secondary: { DEFAULT: '#0f172a', light: '#1e293b' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .sidebar-link.active {
+            @apply bg-primary/10 text-primary border-r-4 border-primary dark:bg-primary/20;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300 overflow-hidden h-screen flex">
+    
+    <!-- Sidebar (Drawer on mobile) -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-slate-900 border-r border-slate-100 dark:border-slate-800 flex flex-col h-full z-50 transform -translate-x-full lg:translate-x-0 lg:static transition-transform duration-300 ease-in-out">
+        <div class="p-8 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
+                <i data-lucide="mic-2" class="w-8 h-8"></i>
+                <span>VoxTalent</span>
+            </a>
+            <button id="sidebar-close" class="lg:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        
+        <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+            <p class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Main Menu</p>
+            <a href="#" class="sidebar-link active flex items-center gap-4 px-4 py-3 rounded-xl font-bold transition-all">
+                <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
+            </a>
+            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+                <i data-lucide="briefcase" class="w-5 h-5"></i> My Projects
+            </a>
+            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+                <i data-lucide="message-square" class="w-5 h-5"></i> Inbox
+                <span class="ml-auto bg-primary text-white text-[10px] px-2 py-0.5 rounded-full">3</span>
+            </a>
+            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+                <i data-lucide="mic" class="w-5 h-5"></i> Portfolio
+            </a>
+            
+            <p class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-8 mb-4">Finance</p>
+            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+                <i data-lucide="wallet" class="w-5 h-5"></i> Earnings
+            </a>
+            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+                <i data-lucide="file-text" class="w-5 h-5"></i> Invoices
+            </a>
+            
+            <p class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-8 mb-4">Account</p>
+            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+                <i data-lucide="settings" class="w-5 h-5"></i> Settings
+            </a>
+        </nav>
+        
+        <div class="p-6 border-t border-slate-100 dark:border-slate-800">
+            <a href="index.html" class="flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-500/10 transition-all">
+                <i data-lucide="log-out" class="w-5 h-5"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+
+    <!-- Main Wrapper -->
+    <div class="flex-1 flex flex-col min-w-0">
+        <!-- Top Header -->
+        <header class="h-20 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between px-8 z-30">
+            <div class="flex items-center gap-4">
+                <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                <h1 class="text-xl font-bold font-display">User Dashboard</h1>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <!-- Theme / RTL toggles -->
+                <div class="flex items-center gap-2 border-r pr-6 dark:border-slate-800">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle Theme">
+                        <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
+                        <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
+                    </button>
+                    <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle RTL">
+                        <i data-lucide="languages" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                
+                <!-- Notif -->
+                <button class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <i data-lucide="bell" class="w-5 h-5"></i>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-rose-500 rounded-full"></span>
+                </button>
+                
+                <!-- Profile -->
+                <div class="flex items-center gap-3 pl-2 cursor-pointer group">
+                    <div class="text-right hidden sm:block">
+                        <p class="text-sm font-bold group-hover:text-primary transition-colors">Alex Rivera</p>
+                        <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Pro Talent</p>
+                    </div>
+                    <img src="https://i.pravatar.cc/150?u=rivera" alt="User" class="w-10 h-10 rounded-xl object-cover ring-2 ring-slate-100 dark:ring-slate-800 group-hover:ring-primary transition-all">
+                </div>
+            </div>
+        </header>
+        
+        <!-- Dashboard Content -->
+        <main class="flex-1 overflow-y-auto p-8 bg-slate-50 dark:bg-slate-950">
+            <div class="max-w-6xl mx-auto">
+                <!-- Welcome -->
+                <div class="mb-10 fade-in">
+                    <h2 class="text-3xl font-bold font-display mb-2">Welcome back, <span class="text-primary italic">Alex!</span> 👋</h2>
+                    <p class="text-slate-500">Here's what's happening with your account today.</p>
+                </div>
+                
+                <!-- Metrics -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in">
+                        <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="eye" class="w-6 h-6"></i></div>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Profile Views</p>
+                        <div class="flex items-end gap-3">
+                             <h4 class="text-2xl font-bold">1,284</h4>
+                             <span class="text-emerald-500 text-xs font-bold mb-1">+12%</span>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="dollar-sign" class="w-6 h-6"></i></div>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Total Earnings</p>
+                        <div class="flex items-end gap-3">
+                             <h4 class="text-2xl font-bold">$4,820</h4>
+                             <span class="text-emerald-500 text-xs font-bold mb-1">+$850</span>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6"></i></div>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Active Jobs</p>
+                        <h4 class="text-2xl font-bold">3</h4>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in" style="transition-delay: 300ms;">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-4"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Success Rate</p>
+                        <h4 class="text-2xl font-bold">98%</h4>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Job Board -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 shadow-sm border border-slate-100 dark:border-slate-800 fade-in">
+                             <div class="flex justify-between items-center mb-8">
+                                 <h3 class="text-xl font-bold font-display">Active Projects</h3>
+                                 <a href="#" class="text-primary text-sm font-bold hover:underline">View All</a>
+                             </div>
+                             <div class="overflow-x-auto">
+                                 <table class="w-full text-left">
+                                     <thead>
+                                         <tr class="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 dark:border-slate-800">
+                                             <th class="pb-4 px-2">Project</th>
+                                             <th class="pb-4 px-2">Client</th>
+                                             <th class="pb-4 px-2">Status</th>
+                                             <th class="pb-4 px-2 text-right">Budget</th>
+                                         </tr>
+                                     </thead>
+                                     <tbody class="divide-y divide-slate-50 dark:divide-slate-800">
+                                         <tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                             <td class="py-4 px-2 font-bold text-sm">Tech Explainer Video</td>
+                                             <td class="py-4 px-2 text-sm text-slate-500">Google Cloud</td>
+                                             <td class="py-4 px-2">
+                                                 <span class="px-3 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-full text-[10px] font-bold uppercase">Auditioning</span>
+                                             </td>
+                                             <td class="py-4 px-2 text-sm font-bold text-right">$450</td>
+                                         </tr>
+                                         <tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                             <td class="py-4 px-2 font-bold text-sm">Car Commercial (Radio)</td>
+                                             <td class="py-4 px-2 text-sm text-slate-500">BMW Global</td>
+                                             <td class="py-4 px-2">
+                                                 <span class="px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full text-[10px] font-bold uppercase">In Progress</span>
+                                             </td>
+                                             <td class="py-4 px-2 text-sm font-bold text-right">$1,200</td>
+                                         </tr>
+                                         <tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                             <td class="py-4 px-2 font-bold text-sm">Meditation App Narration</td>
+                                             <td class="py-4 px-2 text-sm text-slate-500">CalmMind</td>
+                                             <td class="py-4 px-2">
+                                                 <span class="px-3 py-1 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px] font-bold uppercase">Review</span>
+                                             </td>
+                                             <td class="py-4 px-2 text-sm font-bold text-right">$300</td>
+                                         </tr>
+                                     </tbody>
+                                 </table>
+                             </div>
+                        </div>
+
+                        <!-- Demo Manager -->
+                        <div class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 shadow-sm border border-slate-100 dark:border-slate-800 fade-in">
+                             <div class="flex justify-between items-center mb-8">
+                                 <h3 class="text-xl font-bold font-display">My Portfolio</h3>
+                                 <button class="bg-primary text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-primary-dark transition-all">Upload New</button>
+                             </div>
+                             <div class="space-y-4">
+                                 <div class="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl group">
+                                     <div class="w-10 h-10 bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center text-primary shadow-sm"><i data-lucide="play" class="w-4 h-4 fill-current"></i></div>
+                                     <div class="flex-1">
+                                         <p class="text-sm font-bold">Cinematic Trailer Demo 2026</p>
+                                         <p class="text-[10px] text-slate-500">English • Deep • Energetic</p>
+                                     </div>
+                                     <button class="text-slate-400 hover:text-rose-500"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                                 </div>
+                                 <div class="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl group">
+                                     <div class="w-10 h-10 bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center text-primary shadow-sm"><i data-lucide="play" class="w-4 h-4 fill-current"></i></div>
+                                     <div class="flex-1">
+                                         <p class="text-sm font-bold">Corporate Explainer Sample</p>
+                                         <p class="text-[10px] text-slate-500">English • Neutral • Professional</p>
+                                     </div>
+                                     <button class="text-slate-400 hover:text-rose-500"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar Widgets -->
+                    <div class="space-y-8">
+                        <!-- Inbox Widget -->
+                        <div class="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 shadow-sm border border-slate-100 dark:border-slate-800 fade-in">
+                             <h3 class="text-xl font-bold font-display mb-6">Recent Messages</h3>
+                             <div class="space-y-6">
+                                 <div class="flex items-center gap-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 p-2 rounded-xl transition-all">
+                                      <img src="https://i.pravatar.cc/150?u=client1" class="w-10 h-10 rounded-full object-cover">
+                                      <div class="flex-1 overflow-hidden">
+                                          <p class="text-sm font-bold truncate">Sarah from Google</p>
+                                          <p class="text-xs text-slate-500 truncate">Hey Alex, we loved your audition...</p>
+                                      </div>
+                                      <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                 </div>
+                                 <div class="flex items-center gap-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 p-2 rounded-xl transition-all">
+                                      <img src="https://i.pravatar.cc/150?u=client2" class="w-10 h-10 rounded-full object-cover">
+                                      <div class="flex-1 overflow-hidden">
+                                          <p class="text-sm font-bold truncate">Mark from BMW</p>
+                                          <p class="text-xs text-slate-500 truncate">Is the pick up session still on for...</p>
+                                      </div>
+                                 </div>
+                             </div>
+                             <a href="#" class="block text-center mt-8 text-sm font-bold text-primary hover:underline">Open Inbox</a>
+                        </div>
+                        
+                        <!-- Payouts -->
+                        <div class="bg-primary text-white rounded-[2.5rem] p-8 shadow-xl shadow-primary/20 fade-in">
+                             <h3 class="text-lg font-bold mb-2">Available Payout</h3>
+                             <h2 class="text-4xl font-bold italic mb-6">$1,420.00</h2>
+                             <button class="w-full bg-white text-primary py-3 rounded-xl font-bold text-sm hover:bg-slate-50 transition-all">Request Withdrawal</button>
+                             <p class="text-[10px] text-white/60 text-center mt-4 uppercase font-bold tracking-widest">Next payout: April 15, 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Dashboard specific JS
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebarClose = document.getElementById('sidebar-close');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        const body = document.body;
+        
+        function toggleSidebar() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+            body.style.overflow = sidebar.classList.contains('-translate-x-full') ? '' : 'hidden';
+        }
+
+        if (sidebarToggle) sidebarToggle.addEventListener('click', toggleSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', toggleSidebar);
+        if (overlay) overlay.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>

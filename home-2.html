@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join VoxTalent | Turn Your Voice Into a Global Career</title>
+    <meta name="description" content="Professional voice actors wanted. Join our global platform, access high-paying gigs, and grow your voice acting career with premium tools.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#4f46e5',
+                            dark: '#4338ca',
+                        },
+                        secondary: {
+                            DEFAULT: '#0f172a',
+                            light: '#1e293b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass dark:bg-slate-900/80">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
+                <i data-lucide="mic-2" class="w-8 h-8"></i>
+                <span>VoxTalent</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="hover:text-primary transition-colors font-medium">Home</a>
+                <a href="home-2.html" class="text-primary font-medium">Home 2</a>
+                <a href="services.html" class="hover:text-primary transition-colors font-medium">Services</a>
+                <a href="about.html" class="hover:text-primary transition-colors font-medium">About</a>
+                <a href="voice-bank.html" class="hover:text-primary transition-colors font-medium">Talent Roster</a>
+                <a href="contact.html" class="hover:text-primary transition-colors font-medium">Contact</a>
+                <a href="login.html" class="btn-secondary py-2 px-4 text-sm">Login</a>
+                <a href="signup.html" class="btn-primary py-2 px-4 text-sm transform hover:scale-105">Join Now</a>
+                <a href="dashboard.html" class="hover:text-primary transition-colors font-medium border-l pl-8 dark:border-slate-700">Dashboard</a>
+            </div>
+
+            <!-- Controls (Theme/RTL) -->
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle Theme">
+                    <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
+                    <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
+                </button>
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle RTL">
+                    <i data-lucide="languages" class="w-5 h-5"></i>
+                </button>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (outside header to avoid backdrop-filter stacking context) -->
+    <div id="mobile-menu">
+        <div class="menu-close-row">
+            <button id="mobile-menu-close" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <nav class="menu-nav-list">
+            <a href="index.html" class="menu-link">Home</a>
+            <a href="home-2.html" class="menu-link active"><span>Home 2</span></a>
+            <a href="about.html" class="menu-link">About</a>
+            <a href="services.html" class="menu-link">Services</a>
+            <a href="voice-bank.html" class="menu-link">Voice Bank</a>
+            <a href="contact.html" class="menu-link">Contact</a>
+            <a href="dashboard.html" class="menu-link">Dashboard</a>
+        </nav>
+        <div class="menu-login-area">
+            <a href="login.html" class="btn-mobile-login">Login</a>
+            <a href="signup.html" class="menu-link" style="font-size:0.85rem; padding:0.5rem 0;">Create Account</a>
+        </div>
+    </div>
+    <div class="mobile-overlay"></div>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/img/hero-talent.png" alt="Recording Studio" class="w-full h-full object-cover brightness-[0.5] dark:brightness-[0.4]">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <div class="max-w-4xl mx-auto fade-in">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30 font-bold mb-6 text-sm uppercase tracking-wider">Now Recruiting Global Voices</span>
+                    <h1 class="text-4xl md:text-7xl font-bold font-display text-white mb-6 leading-tight">
+                        Turn Your <span class="text-primary italic">Voice</span> Into <br> a Rewarding Career
+                    </h1>
+                    <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                        Connect with top brands, access exclusive auditions, and get paid for your unique talent. Join the world's most elite voice acting roster.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="signup.html" class="bg-primary text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20">
+                            Join as Talent Today
+                        </a>
+                        <a href="#benefits" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all transform hover:scale-105">
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center justify-center gap-8 text-slate-400 grayscale opacity-60">
+                        <div class="flex items-center gap-2">
+                             <span class="text-2xl font-bold text-white">50k+</span>
+                             <span>Active Jobs</span>
+                        </div>
+                        <div class="w-px h-8 bg-slate-700"></div>
+                        <div class="flex items-center gap-2">
+                             <span class="text-2xl font-bold text-white">$12M+</span>
+                             <span>Paid to Talent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Benefits -->
+        <section id="benefits" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">Why Work With VoxTalent?</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We provide the tools and exposure you need to take your voice acting business to the next level.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 fade-in text-center">
+                        <div class="w-14 h-14 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Secure Payments</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Never worry about chasing invoices. Our platform ensures you get paid on time for every project you complete.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 fade-in text-center" style="transition-delay: 150ms;">
+                        <div class="w-14 h-14 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <i data-lucide="globe-2" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Global Reach</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Work with brands from across the globe. Our platform connects you with international casting directors and creators.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 fade-in text-center" style="transition-delay: 300ms;">
+                        <div class="w-14 h-14 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <i data-lucide="layout" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Profile Tools</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Manage your demos, track your earnings, and optimize your profile with our advanced analytic and portfolio tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Plans -->
+        <section id="pricing" class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">Ready to Grow?</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Choose the plan that fits your current career stage. No hidden fees, just pure opportunity.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Basic Tier -->
+                    <div class="bg-white dark:bg-slate-800 p-10 rounded-3xl border border-slate-200 dark:border-slate-700 flex flex-col fade-in">
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold mb-2">Basic</h3>
+                            <p class="text-slate-500 text-sm">Great for beginners</p>
+                        </div>
+                        <div class="mb-8">
+                            <span class="text-4xl font-bold italic">$0</span>
+                            <span class="text-slate-500">/ forever</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-500"></i>
+                                <span>Public Profile View</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-500"></i>
+                                <span>Browse Public Jobs</span>
+                            </li>
+                        </ul>
+                        <button class="btn-secondary w-full py-4 text-sm">Get Started</button>
+                    </div>
+                    
+                    <!-- Standard (Popular) -->
+                    <div class="bg-indigo-950 text-white p-10 rounded-3xl border-2 border-primary relative flex flex-col fade-in shadow-2xl">
+                        <div class="absolute top-0 right-10 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Standard Pro</h3>
+                            <p class="text-slate-400 text-sm">For the rising professional</p>
+                        </div>
+                        <div class="mb-8">
+                            <span class="text-4xl font-bold italic">$29</span>
+                            <span class="text-slate-400">/ mo</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-primary"></i><span>Priority Audition Matching</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-primary"></i><span>100 Audition Credits / mo</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-5 h-5 text-primary"></i><span>Standard Analytics</span></li>
+                        </ul>
+                        <button class="btn-primary w-full py-4 text-sm transform hover:scale-105 shadow-xl shadow-primary/20">Upgrade to Pro</button>
+                    </div>
+
+                    <!-- Elite Tier -->
+                    <div class="bg-white dark:bg-slate-800 p-10 rounded-3xl border border-slate-200 dark:border-slate-700 flex flex-col fade-in">
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold mb-2">Elite</h3>
+                            <p class="text-slate-500 text-sm">Top-tier agents & studios</p>
+                        </div>
+                        <div class="mb-8">
+                            <span class="text-4xl font-bold italic">$89</span>
+                            <span class="text-slate-500">/ mo</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400"><i data-lucide="check" class="w-5 h-5 text-emerald-500"></i><span>Unlimited Auditions</span></li>
+                            <li class="flex items-center gap-3 text-slate-600 dark:text-slate-400"><i data-lucide="check" class="w-5 h-5 text-emerald-500"></i><span>Zero Commission</span></li>
+                        </ul>
+                        <button class="btn-secondary w-full py-4 text-sm">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="py-24 bg-slate-950 text-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row gap-20 items-center">
+                    <div class="lg:w-1/2 fade-in">
+                        <h2 class="text-4xl md:text-5xl font-bold font-display mb-8">Voices of Success</h2>
+                        <p class="text-slate-400 text-lg mb-12">Hear from the people who transformed their passion into a thriving business on our platform.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex gap-6 items-start">
+                                <img src="assets/img/actor-liam.png" alt="Actor" class="w-16 h-16 rounded-2xl object-cover shrink-0">
+                                <div>
+                                    <p class="text-slate-300 italic mb-4">"Within my first month on VoxTalent, I booked three national TV commercials. The platform literally pays for itself."</p>
+                                    <h4 class="font-bold text-primary">Liam Baker</h4>
+                                    <p class="text-sm text-slate-500 uppercase tracking-widest font-bold">Pro Voice Actor</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 items-start" style="transition-delay: 200ms;">
+                                <img src="assets/img/actor-sophia.png" alt="Actor" class="w-16 h-16 rounded-2xl object-cover shrink-0">
+                                <div>
+                                    <p class="text-slate-300 italic mb-4">"The audition matching algorithm is incredible. I only get matched with jobs that actually fit my range and tone."</p>
+                                    <h4 class="font-bold text-primary">Sophia Mendez</h4>
+                                    <p class="text-sm text-slate-500 uppercase tracking-widest font-bold">Animation Specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 grid grid-cols-2 gap-4 fade-in">
+                        <div class="space-y-4 pt-12">
+                            <img src="assets/img/studio-session.png" class="rounded-3xl w-full h-80 object-cover grayscale hover:grayscale-0 transition-all cursor-pointer" alt="Studio">
+                            <img src="assets/img/studio-mic.png" class="rounded-3xl w-full h-40 object-cover grayscale hover:grayscale-0 transition-all cursor-pointer" alt="Mic">
+                        </div>
+                        <div class="space-y-4">
+                            <img src="assets/img/studio-mixer.png" class="rounded-3xl w-full h-40 object-cover grayscale hover:grayscale-0 transition-all cursor-pointer" alt="Sound">
+                            <img src="assets/img/studio-booth.png" class="rounded-3xl w-full h-80 object-cover grayscale hover:grayscale-0 transition-all cursor-pointer" alt="Actor">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Standard Guidelines -->
+        <section class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">Studio Standard Guidelines</h2>
+                    <p class="text-slate-600 dark:text-slate-400">To maintain the highest quality for our clients, we expect the following standards from our rostered talent.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-slate-50 dark:bg-slate-900 rounded-3xl p-10 md:p-16 fade-in">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                            <i data-lucide="mic" class="text-primary w-6 h-6"></i>
+                            Hardware & Tech
+                        </h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">XLR Microphone</h4>
+                                    <p class="text-sm text-slate-500">Professional condenser microphone required. No USB mics for premium tier.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Audio Interface</h4>
+                                    <p class="text-sm text-slate-500">Dedicated interface (Focusrite, Apollo, etc.) with phantom power.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Acoustic Treatment</h4>
+                                    <p class="text-sm text-slate-500">Studio booth or treated room with -60dB noise floor or better.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                            <i data-lucide="file-audio" class="text-primary w-6 h-6"></i>
+                            File Specifications
+                        </h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Sampling Rate</h4>
+                                    <p class="text-sm text-slate-500">Minimum 48kHz / 24-bit WAV format. No MP3 masters.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">5</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Clean Raw Files</h4>
+                                    <p class="text-sm text-slate-500">Deliver raw tracks with -3dB peak and -18dB RMS levels.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">6</div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Turnaround Time</h4>
+                                    <p class="text-sm text-slate-500">Standard 24-hour turnaround for most commercial projects.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 text-center">
+            <div class="container mx-auto px-4 fade-in">
+                <div class="bg-primary rounded-[3rem] p-16 md:p-24 text-white relative overflow-hidden">
+                    <div class="absolute inset-0 bg-secondary/10 -rotate-3 translate-y-20"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-4xl md:text-6xl font-bold mb-8 italic">Ready to make some noise?</h2>
+                        <p class="text-xl text-primary-dark/20 mb-12 max-w-xl mx-auto">Join the 10,000+ professionals already building their careers on VoxTalent.</p>
+                        <a href="signup.html" class="inline-block bg-white text-primary px-12 py-5 rounded-2xl font-bold text-xl hover:bg-slate-50 transition-all transform hover:scale-105 shadow-2xl">
+                            Sign Up Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Shared) -->
+    <footer class="bg-slate-950 text-white pt-20 pb-10 border-t border-slate-800 mt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
+                        <i data-lucide="mic-2" class="w-8 h-8"></i>
+                        <span>VoxTalent</span>
+                    </a>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        The world's leading platform for professional voice acting. We connect global brands with the perfect voices for every story.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441c.795 0 1.439-.645 1.439-1.441s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.989v-10.1c0-7.865-8.724-7.593-11.02-3.267v-2.633z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">For Clients</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="voice-bank.html" class="hover:text-white transition-colors">Find Voice Talent</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Post a Job</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Managed Casting</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Translation Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">For Talent</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="home-2.html" class="hover:text-white transition-colors">Join as Talent</a></li>
+                        <li><a href="home-2.html#pricing" class="hover:text-white transition-colors">Membership Plans</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Academy & Coaching</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Equipment Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Community Forum</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Join Our Newsletter</h4>
+                    <p class="text-slate-400 mb-6">Get weekly tips on audio production and industry trends.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your email address" class="bg-slate-800 border-none rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-primary outline-none">
+                        <button class="bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary-dark transition-all">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>&copy; 2026 VoxTalent Inc. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

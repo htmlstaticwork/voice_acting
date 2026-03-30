@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary: #0f172a;
+  --accent: #10b981;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   MOBILE MENU - Reference Image Style
+   ============================================= */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 55;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 300px;
+  background: #ffffff;
+  z-index: 60;
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.12);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dark #mobile-menu {
+  background: #0f172a;
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.4);
+}
+
+#mobile-menu.active {
+  transform: translateX(0);
+}
+
+[dir="rtl"] #mobile-menu {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] #mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* Close button row */
+.menu-close-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.25rem 1.25rem 0.75rem;
+}
+
+/* Centered nav list wrapper */
+.menu-nav-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem 2rem;
+  gap: 0;
+}
+
+/* Each nav link — centered, clean text */
+.menu-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1.1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #475569;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.dark .menu-link {
+  color: #94a3b8;
+}
+
+.menu-link:hover {
+  color: #4f46e5;
+}
+
+/* Active link — inline underline like reference image */
+.menu-link.active {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.menu-link.active span {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-link.active span::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #4f46e5;
+  border-radius: 2px;
+}
+
+/* Login button area */
+.menu-login-area {
+  padding: 1.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Gradient pill login button */
+.btn-mobile-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 2.75rem;
+  border-radius: 9999px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.35);
+  text-decoration: none;
+}
+
+.btn-mobile-login:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+
+.btn-primary {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2);
+}
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .btn-secondary {
+  background-color: #1e293b;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e8f0;
+}
+
+.dark .btn-secondary:hover {
+  background-color: #334155;
+}
+
+/* Card Hover Effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}

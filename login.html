@@ -28,11 +28,11 @@
     <link rel="stylesheet" href="assets/css/global.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 flex items-center justify-center min-h-screen p-4 transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white flex items-center justify-center min-h-screen p-4 transition-colors duration-300">
     <!-- Login Card -->
     <div class="w-full max-w-md bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-2xl p-8 md:p-12 relative fade-in">
         <!-- Card Controls -->
-        <div class="absolute top-8 right-8 flex gap-2">
+        <div class="flex justify-end w-full mb-4 -mt-4 gap-2">
             <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                 <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
                 <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
@@ -48,38 +48,20 @@
                 <i data-lucide="mic-2" class="w-7 h-7"></i>
                 <span>VoxTalent</span>
             </a>
-            <h1 class="text-2xl font-bold font-display">Welcome Back</h1>
-            <p class="text-slate-500 text-sm mt-2">Enter your credentials to access your account</p>
-        </div>
-
-        <!-- Social SSO -->
-        <div class="grid grid-cols-2 gap-4 mb-8">
-            <button class="flex items-center justify-center gap-3 py-3 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all font-bold text-sm">
-                <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" class="w-5 h-5" alt="Google">
-                Google
-            </button>
-            <button class="flex items-center justify-center gap-3 py-3 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all font-bold text-sm">
-                <img src="https://www.vectorlogo.zone/logos/apple/apple-icon.svg" class="w-5 h-5 dark:invert" alt="Apple">
-                Apple
-            </button>
-        </div>
-
-        <div class="relative flex items-center mb-8">
-            <div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
-            <span class="px-4 text-xs font-bold text-slate-400 uppercase tracking-widest">Or login with email</span>
-            <div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+            <h1 class="text-2xl font-bold font-display dark:text-white transition-colors">Welcome Back</h1>
+            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 transition-colors">Enter your credentials to access your account</p>
         </div>
 
         <!-- Login Form -->
         <form class="space-y-6">
             <div>
                 <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Email Address</label>
-                <input type="email" placeholder="name@company.com" class="w-full bg-slate-50 dark:bg-slate-800 border-none p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all">
+                <input type="email" placeholder="name@company.com" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all">
             </div>
             <div>
                 <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Password</label>
                 <div class="relative">
-                    <input type="password" placeholder="••••••••" class="w-full bg-slate-50 dark:bg-slate-800 border-none p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all">
+                    <input type="password" placeholder="••••••••" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all">
                     <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></button>
                 </div>
             </div>
@@ -96,6 +78,24 @@
                 Log In
             </button>
         </form>
+
+        <div class="relative flex items-center my-10">
+            <div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+            <span class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">or connect with</span>
+            <div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+        </div>
+
+        <!-- Social SSO -->
+        <div class="grid grid-cols-2 gap-4">
+            <button class="flex items-center justify-center gap-3 py-3 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all font-bold text-sm dark:text-white">
+                <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" class="w-5 h-5" alt="Google">
+                Google
+            </button>
+            <button class="flex items-center justify-center gap-3 py-3 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all font-bold text-sm dark:text-white">
+                <img src="https://www.vectorlogo.zone/logos/apple/apple-icon.svg" class="w-5 h-5 dark:invert" alt="Apple">
+                Apple
+            </button>
+        </div>
 
         <p class="text-center mt-10 text-sm text-slate-500">
             Don't have an account? <a href="signup.html" class="text-primary font-bold hover:underline">Create Account</a>

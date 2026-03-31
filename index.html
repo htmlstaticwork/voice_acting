@@ -47,7 +47,7 @@
             </a>
             
             <!-- Desktop Nav -->
-            <div class="hidden lg:flex items-center gap-8">
+            <div class="hidden xl:flex items-center gap-8">
                 <a href="index.html" class="text-primary font-medium">Home</a>
                 <a href="home-2.html" class="hover:text-primary transition-colors font-medium">Home 2</a>
                 <a href="services.html" class="hover:text-primary transition-colors font-medium">Services</a>
@@ -68,7 +68,7 @@
                 <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle RTL">
                     <i data-lucide="languages" class="w-5 h-5"></i>
                 </button>
-                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                 <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
@@ -87,7 +87,7 @@
             <a href="home-2.html" class="menu-link">Home 2</a>
             <a href="about.html" class="menu-link">About</a>
             <a href="services.html" class="menu-link">Services</a>
-            <a href="voice-bank.html" class="menu-link">Voice Bank</a>
+            <a href="voice-bank.html" class="menu-link">Talent Roster</a>
             <a href="contact.html" class="menu-link">Contact</a>
             <a href="dashboard.html" class="menu-link">Dashboard</a>
         </nav>
@@ -139,12 +139,12 @@
         <!-- Featured Demos -->
         <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
             <div class="container mx-auto px-4">
-                <div class="flex justify-between items-end mb-12 fade-in">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12 fade-in">
                     <div>
                         <h2 class="text-3xl font-bold font-display mb-4">Featured Demos</h2>
                         <p class="text-slate-600 dark:text-slate-400">Listen to our top-rated voice actors in action.</p>
                     </div>
-                    <a href="voice-bank.html" class="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                    <a href="voice-bank.html" class="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
                         Browse All <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
@@ -193,23 +193,25 @@
                     </div>
 
                     <!-- Demo Card 3 -->
-                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700 hover-card fade-in">
-                        <div class="flex items-center gap-4 mb-6">
-                            <img src="assets/img/actor-elena.png" alt="Actor" class="w-16 h-16 rounded-full object-cover">
-                            <div>
-                                <h3 class="font-bold text-lg">Elena Rodriguez</h3>
-                                <p class="text-sm text-slate-500">Spanish • Animation</p>
+                    <div class="md:col-span-2 lg:col-span-1 flex justify-center lg:block">
+                        <div class="w-full max-w-md lg:max-w-none bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700 hover-card fade-in">
+                            <div class="flex items-center gap-4 mb-6">
+                                <img src="assets/img/actor-elena.png" alt="Actor" class="w-16 h-16 rounded-full object-cover">
+                                <div>
+                                    <h3 class="font-bold text-lg">Elena Rodriguez</h3>
+                                    <p class="text-sm text-slate-500">Spanish • Animation</p>
+                                </div>
+                                <button class="ml-auto w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                                    <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                                </button>
                             </div>
-                            <button class="ml-auto w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                                <i data-lucide="play" class="w-5 h-5 fill-current"></i>
-                            </button>
-                        </div>
-                        <div class="bg-slate-100 dark:bg-slate-700 h-2 w-full rounded-full overflow-hidden mb-4">
-                            <div class="bg-primary h-full w-0"></div>
-                        </div>
-                        <div class="flex justify-between text-xs text-slate-500">
-                            <span>0:00</span>
-                            <span>0:38</span>
+                            <div class="bg-slate-100 dark:bg-slate-700 h-2 w-full rounded-full overflow-hidden mb-4">
+                                <div class="bg-primary h-full w-0"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-500">
+                                <span>0:00</span>
+                                <span>0:38</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -297,12 +299,12 @@
                     <span class="text-primary font-bold tracking-widest uppercase text-sm">Trusted By Global Brands</span>
                 </div>
                 <!-- Brand Logos -->
-                <div class="flex flex-wrap justify-center gap-12 md:gap-20 opacity-40 grayscale filter dark:invert mb-20 fade-in">
-                    <img src="assets/img/logo-google.png" alt="Google" class="h-16 object-contain">
-                    <img src="assets/img/logo-amazon.png" alt="Amazon" class="h-16 object-contain">
-                    <img src="assets/img/logo-ibm.png" alt="IBM" class="h-16 object-contain">
-                    <img src="assets/img/logo-netflix.png" alt="Netflix" class="h-16 object-contain">
-                    <img src="assets/img/logo-bmw.png" alt="BMW" class="h-16 object-contain">
+                <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20 mb-20 fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-8 md:h-10 lg:h-12 object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="h-8 md:h-10 lg:h-12 object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="h-8 md:h-10 lg:h-12 object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-8 md:h-10 lg:h-12 object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW" class="h-10 md:h-12 lg:h-14 object-contain hover:scale-110 transition-transform duration-300">
                 </div>
                 
                 <!-- Testimonials -->
@@ -353,9 +355,9 @@
     <!-- Footer -->
     <footer class="bg-slate-950 text-white pt-20 pb-10 border-t border-slate-800 mt-20">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Brand -->
-                <div class="space-y-6">
+                <div class="col-span-2 md:col-span-1 space-y-6">
                     <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
                         <i data-lucide="mic-2" class="w-8 h-8"></i>
                         <span>VoxTalent</span>
@@ -380,9 +382,9 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-bold text-lg mb-6">For Clients</h4>
+                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Navigation</h4>
                     <ul class="space-y-4 text-slate-400">
-                        <li><a href="voice-bank.html" class="hover:text-white transition-colors">Find Voice Talent</a></li>
+                        <li><a href="voice-bank.html" class="hover:text-white transition-colors">Talent Roster</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Post a Job</a></li>
                         <li><a href="services.html" class="hover:text-white transition-colors">Managed Casting</a></li>
                         <li><a href="services.html" class="hover:text-white transition-colors">Translation Services</a></li>
@@ -391,7 +393,7 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-bold text-lg mb-6">For Talent</h4>
+                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Company</h4>
                     <ul class="space-y-4 text-slate-400">
                         <li><a href="home-2.html" class="hover:text-white transition-colors">Join as Talent</a></li>
                         <li><a href="home-2.html#pricing" class="hover:text-white transition-colors">Membership Plans</a></li>
@@ -401,7 +403,7 @@
                     </ul>
                 </div>
                 
-                <div>
+                <div class="col-span-2 md:col-span-1">
                     <h4 class="font-bold text-lg mb-6">Join Our Newsletter</h4>
                     <p class="text-slate-400 mb-6">Get weekly tips on audio production and industry trends.</p>
                     <form class="flex flex-col gap-3">

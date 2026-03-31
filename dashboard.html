@@ -29,7 +29,12 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .sidebar-link.active {
-            @apply bg-primary/10 text-primary border-r-4 border-primary dark:bg-primary/20;
+            background-color: rgba(79, 70, 229, 0.1);
+            color: #4f46e5;
+            border-right: 4px solid #4f46e5;
+        }
+        .dark .sidebar-link.active {
+            background-color: rgba(79, 70, 229, 0.2);
         }
     </style>
 </head>
@@ -49,30 +54,30 @@
         
         <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
             <p class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Main Menu</p>
-            <a href="#" class="sidebar-link active flex items-center gap-4 px-4 py-3 rounded-xl font-bold transition-all">
+            <a href="dashboard.html" class="sidebar-link active flex items-center gap-4 px-4 py-3 rounded-xl font-bold transition-all">
                 <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
             </a>
-            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+            <a href="projects.html" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
                 <i data-lucide="briefcase" class="w-5 h-5"></i> My Projects
             </a>
-            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+            <a href="inbox.html" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
                 <i data-lucide="message-square" class="w-5 h-5"></i> Inbox
                 <span class="ml-auto bg-primary text-white text-[10px] px-2 py-0.5 rounded-full">3</span>
             </a>
-            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+            <a href="portfolio.html" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
                 <i data-lucide="mic" class="w-5 h-5"></i> Portfolio
             </a>
             
             <p class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-8 mb-4">Finance</p>
-            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+            <a href="earnings.html" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
                 <i data-lucide="wallet" class="w-5 h-5"></i> Earnings
             </a>
-            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+            <a href="invoices.html" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
                 <i data-lucide="file-text" class="w-5 h-5"></i> Invoices
             </a>
             
             <p class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-8 mb-4">Account</p>
-            <a href="#" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
+            <a href="settings.html" class="sidebar-link group flex items-center gap-4 px-4 py-3 rounded-xl font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all">
                 <i data-lucide="settings" class="w-5 h-5"></i> Settings
             </a>
         </nav>
@@ -88,15 +93,15 @@
     <!-- Main Wrapper -->
     <div class="flex-1 flex flex-col min-w-0">
         <!-- Top Header -->
-        <header class="h-20 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between px-8 z-30">
-            <div class="flex items-center gap-4">
+        <header class="h-20 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between px-4 md:px-8 z-30">
+            <div class="flex items-center gap-2 md:gap-4">
                 <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i data-lucide="menu" class="w-6 h-6"></i></button>
-                <h1 class="text-xl font-bold font-display">User Dashboard</h1>
+                <h1 class="text-lg md:text-xl font-bold font-display whitespace-nowrap">User Dashboard</h1>
             </div>
             
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 md:gap-6">
                 <!-- Theme / RTL toggles -->
-                <div class="flex items-center gap-2 border-r pr-6 dark:border-slate-800">
+                <div class="flex items-center gap-1 md:gap-2 border-r pr-3 md:pr-6 dark:border-slate-800">
                     <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle Theme">
                         <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
                         <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
@@ -134,7 +139,7 @@
                 
                 <!-- Metrics -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in">
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in hover:shadow-lg hover:scale-[1.02] transition-all cursor-pointer">
                         <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="eye" class="w-6 h-6"></i></div>
                         <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Profile Views</p>
                         <div class="flex items-end gap-3">
@@ -142,7 +147,7 @@
                              <span class="text-emerald-500 text-xs font-bold mb-1">+12%</span>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in" style="transition-delay: 100ms;">
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in hover:shadow-lg hover:scale-[1.02] transition-all cursor-pointer" style="transition-delay: 100ms;">
                         <div class="w-12 h-12 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="dollar-sign" class="w-6 h-6"></i></div>
                         <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Total Earnings</p>
                         <div class="flex items-end gap-3">
@@ -150,12 +155,12 @@
                              <span class="text-emerald-500 text-xs font-bold mb-1">+$850</span>
                         </div>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in" style="transition-delay: 200ms;">
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in hover:shadow-lg hover:scale-[1.02] transition-all cursor-pointer" style="transition-delay: 200ms;">
                         <div class="w-12 h-12 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6"></i></div>
                         <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Active Jobs</p>
                         <h4 class="text-2xl font-bold">3</h4>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in" style="transition-delay: 300ms;">
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-800 fade-in hover:shadow-lg hover:scale-[1.02] transition-all cursor-pointer" style="transition-delay: 300ms;">
                         <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-4"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
                         <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Success Rate</p>
                         <h4 class="text-2xl font-bold">98%</h4>
@@ -217,7 +222,7 @@
                                  <button class="bg-primary text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-primary-dark transition-all">Upload New</button>
                              </div>
                              <div class="space-y-4">
-                                 <div class="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl group">
+                                 <div class="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl group hover:shadow-md hover:bg-slate-100 transition-all cursor-pointer">
                                      <div class="w-10 h-10 bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center text-primary shadow-sm"><i data-lucide="play" class="w-4 h-4 fill-current"></i></div>
                                      <div class="flex-1">
                                          <p class="text-sm font-bold">Cinematic Trailer Demo 2026</p>
@@ -225,7 +230,7 @@
                                      </div>
                                      <button class="text-slate-400 hover:text-rose-500"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
                                  </div>
-                                 <div class="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl group">
+                                 <div class="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl group hover:shadow-md hover:bg-slate-100 transition-all cursor-pointer">
                                      <div class="w-10 h-10 bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center text-primary shadow-sm"><i data-lucide="play" class="w-4 h-4 fill-current"></i></div>
                                      <div class="flex-1">
                                          <p class="text-sm font-bold">Corporate Explainer Sample</p>

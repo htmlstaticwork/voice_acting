@@ -87,4 +87,57 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // =============================================
+  // BACK TO TOP BUTTON LOGIC
+  // =============================================
+  
+  const createBackToTop = () => {
+    // Check if it already exists to avoid duplicates
+    if (document.getElementById('back-to-top')) return;
+
+    const btn = document.createElement('div');
+    btn.id = 'back-to-top';
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-label', 'Back to top');
+    
+    // Using Lucide Chevron Up icon - it will be initialized by the global lucide.createIcons() call
+    // if we haven't already run it, or we can manually trigger it for this element.
+    btn.innerHTML = '<i data-lucide="chevron-up"></i>';
+    
+    document.body.appendChild(btn);
+
+    // Re-run lucide to iconify the new element
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons({
+        attrs: {
+          class: 'lucide-icon'
+        },
+        nameAttr: 'data-lucide',
+        icons: ['ChevronUp']
+      });
+      // Fallback: just ensure it's created for this specific element
+      lucide.createIcons();
+    }
+
+    // Scroll listener
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Click handler
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  };
+
+  // Initialize Back to Top
+  createBackToTop();
 });

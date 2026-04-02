@@ -100,9 +100,12 @@
             
             <div class="flex items-center gap-6">
                 <div class="flex items-center gap-2 border-r pr-6 dark:border-slate-800">
-                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle Theme">
                         <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
                         <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
+                    </button>
+                    <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle RTL">
+                        <i data-lucide="languages" class="w-5 h-5"></i>
                     </button>
                 </div>
                 <button class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
@@ -121,27 +124,27 @@
                 </div>
 
                 <!-- Financial Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                    <div class="bg-primary text-white p-6 sm:p-8 rounded-[2.5rem] shadow-xl shadow-primary/20 flex flex-col justify-between">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
+                    <div class="bg-primary text-white p-6 sm:p-8 lg:p-6 xl:p-8 rounded-[2.5rem] shadow-xl shadow-primary/20 flex flex-col justify-between">
                          <div>
                              <p class="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">Available to Withdraw</p>
                              <h4 class="text-3xl font-bold italic">$1,420.00</h4>
                          </div>
                          <button class="bg-white text-primary w-full py-3 rounded-xl font-bold text-xs mt-8 hover:bg-slate-100 transition-all transform hover:scale-105 active:scale-95 hover:shadow-xl">Request Withdrawal</button>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800">
+                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 lg:p-6 xl:p-8 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800">
                          <div class="w-12 h-12 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="trending-up" class="w-6 h-6"></i></div>
                          <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Lifetime Income</p>
                          <h4 class="text-2xl font-bold">$12,850.40</h4>
                          <span class="text-emerald-500 text-[10px] font-bold">+18% vs last month</span>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800">
+                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 lg:p-6 xl:p-8 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800">
                          <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6"></i></div>
                          <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Pending Clearance</p>
                          <h4 class="text-2xl font-bold">$840.00</h4>
                          <p class="text-[10px] text-slate-400 mt-2">Clears in approx. 8 days</p>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800">
+                    <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 lg:p-6 xl:p-8 rounded-[2.5rem] shadow-sm border border-slate-100 dark:border-slate-800">
                          <div class="w-12 h-12 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-2xl flex items-center justify-center mb-4"><i data-lucide="award" class="w-6 h-6"></i></div>
                          <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Average Project</p>
                          <h4 class="text-2xl font-bold">$425.00</h4>

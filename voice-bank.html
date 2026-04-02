@@ -103,9 +103,9 @@
         <div class="container mx-auto px-4 mt-[-1.5rem] lg:mt-[-4rem] relative z-20">
             <!-- Search & Trending Bar (Moved but preserved) -->
             <div class="mb-12 fade-in">
-                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8">
+                <div class="flex flex-col lg:flex-row lg:justify-center items-start lg:items-center gap-6 mb-8">
                     <!-- Trending Chips (Moved to the start for better spacing) -->
-                    <div class="flex items-center gap-3 overflow-x-auto pb-2 w-full">
+                    <div class="flex items-center lg:justify-center gap-3 overflow-x-auto pb-2 w-full">
                         <span class="text-sm font-bold text-slate-400 shrink-0">Trending Talent:</span>
                         <a href="#" class="px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-sm font-bold hover:bg-primary hover:text-white transition-all shrink-0">Cinematic</a>
                         <a href="#" class="px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-sm font-bold hover:bg-primary hover:text-white transition-all shrink-0">Child Voice</a>
@@ -173,9 +173,9 @@
                 <div class="flex-1">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 fade-in">
                         <!-- Talent Card 1 -->
-                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group">
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group flex flex-col h-full">
                             <button class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-400 hover:text-rose-500 transition-colors z-10"><i data-lucide="heart" class="w-5 h-5"></i></button>
-                            <div class="flex flex-col items-center text-center mb-8">
+                            <div class="flex flex-col items-center text-center mb-8 min-h-[210px]">
                                 <img src="assets/img/actor-sarah.png" alt="Talent" class="w-24 h-24 rounded-2xl object-cover mb-4 ring-4 ring-slate-50 dark:ring-slate-900">
                                 <h3 class="font-bold text-xl mb-1">Sarah Jenkins</h3>
                                 <p class="text-xs text-slate-500 mb-4">English (US) &bull; Adult &bull; Energetic</p>
@@ -192,16 +192,16 @@
                                 </div>
                                 <span class="text-[10px] font-bold text-slate-400">0:45</span>
                             </div>
-                            <div class="mt-8 flex gap-3">
+                            <div class="mt-auto pt-8 flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
                                 <button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white py-3 rounded-xl font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-600 transition-all whitespace-nowrap px-2">View Profile</button>
                                 <button class="flex-1 bg-primary text-white py-3 rounded-xl font-bold text-xs hover:bg-primary-dark transition-all whitespace-nowrap px-2">Hire Now</button>
                             </div>
                         </div>
 
                         <!-- Repeat/Variety -->
-                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group">
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group flex flex-col h-full">
                             <button class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-400 hover:text-rose-500 transition-colors z-10"><i data-lucide="heart" class="w-5 h-5"></i></button>
-                            <div class="flex flex-col items-center text-center mb-8">
+                            <div class="flex flex-col items-center text-center mb-8 min-h-[210px]">
                                 <img src="assets/img/actor-marcus.png" alt="Talent" class="w-24 h-24 rounded-2xl object-cover mb-4 ring-4 ring-slate-50 dark:ring-slate-900">
                                 <h3 class="font-bold text-xl mb-1">Marcus Thorne</h3>
                                 <p class="text-xs text-slate-500 mb-4">English (UK) &bull; Senior &bull; Corporate</p>
@@ -215,7 +215,7 @@
                                 <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform active:scale-95 transition-all"><i data-lucide="play" class="w-5 h-5 fill-current"></i></button>
                                 <div class="flex-1 h-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
                             </div>
-                            <div class="mt-8 flex gap-3">
+                            <div class="mt-auto pt-8 flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
                                 <button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white py-3 rounded-xl font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-600 transition-all focus:scale-95 whitespace-nowrap px-2">View Profile</button>
                                 <button class="flex-1 bg-primary text-white py-3 rounded-xl font-bold text-xs hover:bg-primary-dark transition-all focus:scale-95 whitespace-nowrap px-2">Hire Now</button>
                             </div>
@@ -223,11 +223,11 @@
 
                         <!-- Talent Card 3 -->
                         <div class="md:col-span-2 lg:col-span-1 flex justify-center lg:block">
-                            <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group w-full max-w-md lg:max-w-none">
+                            <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group w-full max-w-md lg:max-w-none flex flex-col h-full">
                                 <button class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-400 hover:text-rose-500 transition-colors z-10"><i data-lucide="heart" class="w-5 h-5"></i></button>
-                                <div class="flex flex-col items-center text-center mb-8">
+                                <div class="flex flex-col items-center text-center mb-8 min-h-[210px]">
                                     <img src="assets/img/actor-elena.png" alt="Talent" class="w-24 h-24 rounded-2xl object-cover mb-4 ring-4 ring-slate-50 dark:ring-slate-900">
-                                    <h3 class="font-bold text-xl mb-1">Elena Rodriguez</h3>
+                                    <h3 class="font-bold text-xl mb-1">Rodriguez</h3>
                                     <p class="text-xs text-slate-500 mb-4">Spanish &bull; Adult &bull; Storyteller</p>
                                     <div class="flex gap-2 flex-wrap justify-center">
                                         <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-bold text-slate-500">Audiobooks</span>
@@ -242,7 +242,7 @@
                                     </div>
                                     <span class="text-[10px] font-bold text-slate-400">1:15</span>
                                 </div>
-                                <div class="mt-8 flex gap-3">
+                                <div class="mt-auto pt-8 flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
                                     <button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white py-3 rounded-xl font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-600 transition-all whitespace-nowrap px-2">View Profile</button>
                                     <button class="flex-1 bg-primary text-white py-3 rounded-xl font-bold text-xs hover:bg-primary-dark transition-all whitespace-nowrap px-2">Hire Now</button>
                                 </div>
@@ -296,7 +296,6 @@
                 <!-- Brand -->
                 <div class="col-span-2 md:col-span-1 space-y-6">
                     <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
-                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
                         <i data-lucide="mic-2" class="w-8 h-8"></i>
                         <span>VoxTalent</span>
                     </a>
@@ -351,12 +350,12 @@
                 </div>
             </div>
 
-            <div class="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-slate-500 text-xs">&copy; 2026 VoxTalent Inc. All rights reserved.</p>
-                <div class="flex items-center gap-8 text-xs text-slate-500">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+            <div class="pt-10 border-t border-slate-900 flex flex-row justify-between items-center gap-2 text-[10px] sm:text-xs text-slate-500">
+                <p>&copy; 2026 VoxTalent Inc.<span class="hidden sm:inline"> All rights reserved.</span></p>
+                <div class="flex items-center gap-3 sm:gap-8 flex-nowrap">
+                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Cookie Policy</a>
                 </div>
             </div>
         </div>

@@ -174,7 +174,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 fade-in">
                         <!-- Talent Card 1 -->
                         <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group flex flex-col h-full">
-                            <button class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-400 hover:text-rose-500 transition-colors z-10"><i data-lucide="heart" class="w-5 h-5"></i></button>
+                            <button class="absolute top-2 right-2 p-2 rounded-full bg-white/90 dark:bg-slate-700/90 text-slate-400 hover:text-rose-500 transition-colors z-10 shadow-md"><i data-lucide="heart" class="w-5 h-5"></i></button>
                             <div class="flex flex-col items-center text-center mb-8 min-h-[210px]">
                                 <img src="assets/img/actor-sarah.png" alt="Talent" class="w-24 h-24 rounded-2xl object-cover mb-4 ring-4 ring-slate-50 dark:ring-slate-900">
                                 <h3 class="font-bold text-xl mb-1">Sarah Jenkins</h3>
@@ -186,11 +186,13 @@
                             </div>
                             <!-- Player -->
                             <div class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-4 flex items-center gap-4">
-                                <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform active:scale-95 transition-all"><i data-lucide="play" class="w-5 h-5 fill-current"></i></button>
-                                <div class="flex-1 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                                     <div class="bg-primary h-full w-1/3"></div>
+                                <button class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform active:scale-95 transition-all flex-shrink-0"><i data-lucide="play" class="w-6 h-6 fill-current ml-0.5"></i></button>
+                                <div class="flex-1 min-w-0">
+                                    <div class="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                         <div class="bg-primary h-full w-1/3 transition-all duration-300"></div>
+                                    </div>
                                 </div>
-                                <span class="text-[10px] font-bold text-slate-400">0:45</span>
+                                <span class="text-xs font-bold text-slate-400 flex-shrink-0">0:45</span>
                             </div>
                             <div class="mt-auto pt-8 flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
                                 <button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white py-3 rounded-xl font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-600 transition-all whitespace-nowrap px-2">View Profile</button>
@@ -200,7 +202,7 @@
 
                         <!-- Repeat/Variety -->
                         <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group flex flex-col h-full">
-                            <button class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-400 hover:text-rose-500 transition-colors z-10"><i data-lucide="heart" class="w-5 h-5"></i></button>
+                            <button class="absolute top-2 right-2 p-2 rounded-full bg-white/90 dark:bg-slate-700/90 text-slate-400 hover:text-rose-500 transition-colors z-10 shadow-md"><i data-lucide="heart" class="w-5 h-5"></i></button>
                             <div class="flex flex-col items-center text-center mb-8 min-h-[210px]">
                                 <img src="assets/img/actor-marcus.png" alt="Talent" class="w-24 h-24 rounded-2xl object-cover mb-4 ring-4 ring-slate-50 dark:ring-slate-900">
                                 <h3 class="font-bold text-xl mb-1">Marcus Thorne</h3>
@@ -212,8 +214,13 @@
                             </div>
                             <!-- Player -->
                             <div class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-4 flex items-center gap-4">
-                                <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform active:scale-95 transition-all"><i data-lucide="play" class="w-5 h-5 fill-current"></i></button>
-                                <div class="flex-1 h-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+                                <button class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform active:scale-95 transition-all flex-shrink-0"><i data-lucide="play" class="w-6 h-6 fill-current ml-0.5"></i></button>
+                                <div class="flex-1 min-w-0">
+                                    <div class="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                         <div class="bg-primary h-full w-0 transition-all duration-300"></div>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400 flex-shrink-0">0:00</span>
                             </div>
                             <div class="mt-auto pt-8 flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
                                 <button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white py-3 rounded-xl font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-600 transition-all focus:scale-95 whitespace-nowrap px-2">View Profile</button>
@@ -224,7 +231,7 @@
                         <!-- Talent Card 3 -->
                         <div class="md:col-span-2 lg:col-span-1 flex justify-center lg:block">
                             <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-lg border border-slate-100 dark:border-slate-700 hover-card relative group w-full max-w-md lg:max-w-none flex flex-col h-full">
-                                <button class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-400 hover:text-rose-500 transition-colors z-10"><i data-lucide="heart" class="w-5 h-5"></i></button>
+                                <button class="absolute top-2 right-2 p-2 rounded-full bg-white/90 dark:bg-slate-700/90 text-slate-400 hover:text-rose-500 transition-colors z-10 shadow-md"><i data-lucide="heart" class="w-5 h-5"></i></button>
                                 <div class="flex flex-col items-center text-center mb-8 min-h-[210px]">
                                     <img src="assets/img/actor-elena.png" alt="Talent" class="w-24 h-24 rounded-2xl object-cover mb-4 ring-4 ring-slate-50 dark:ring-slate-900">
                                     <h3 class="font-bold text-xl mb-1">Rodriguez</h3>
@@ -236,11 +243,13 @@
                                 </div>
                                 <!-- Player -->
                                 <div class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-4 flex items-center gap-4">
-                                    <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform active:scale-95 transition-all"><i data-lucide="play" class="w-5 h-5 fill-current"></i></button>
-                                    <div class="flex-1 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                                         <div class="bg-primary h-full w-1/4"></div>
+                                    <button class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transform active:scale-95 transition-all flex-shrink-0"><i data-lucide="play" class="w-6 h-6 fill-current ml-0.5"></i></button>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                                             <div class="bg-primary h-full w-1/4 transition-all duration-300"></div>
+                                        </div>
                                     </div>
-                                    <span class="text-[10px] font-bold text-slate-400">1:15</span>
+                                    <span class="text-xs font-bold text-slate-400 flex-shrink-0">1:15</span>
                                 </div>
                                 <div class="mt-auto pt-8 flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
                                     <button class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white py-3 rounded-xl font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-600 transition-all whitespace-nowrap px-2">View Profile</button>
@@ -350,9 +359,9 @@
                 </div>
             </div>
 
-            <div class="pt-10 border-t border-slate-900 flex flex-row justify-between items-center gap-2 text-[10px] sm:text-xs text-slate-500">
+            <div class="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
                 <p>&copy; 2026 VoxTalent Inc.<span class="hidden sm:inline"> All rights reserved.</span></p>
-                <div class="flex items-center gap-3 sm:gap-8 flex-nowrap">
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-8">
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Cookie Policy</a>

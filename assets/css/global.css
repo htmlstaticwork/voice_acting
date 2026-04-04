@@ -345,3 +345,27 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Talent Card Responsive Fixes */
+@media (max-width: 1024px) {
+  .hover-card .absolute.top-2.right-2 {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+  }
+  
+  .hover-card .w-12.h-12 {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  
+  .hover-card .h-2 {
+    height: 0.25rem !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hover-card .absolute.top-2.right-2 {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+  }
+}
+

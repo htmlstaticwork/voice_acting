@@ -88,12 +88,23 @@
     </div>
     <div class="mobile-overlay"></div>
 
-    <main class="pt-32 pb-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center mb-16 fade-in">
-                <h1 class="text-4xl md:text-5xl font-bold font-display mb-4">Let's Talk Voice</h1>
-                <p class="text-slate-500 text-lg">We're here to help you find the perfect voice or grow your career.</p>
+    <main class="pt-20">
+        <!-- Hero Section with Background -->
+        <section class="relative py-20 px-4 mb-20 overflow-hidden min-h-[60vh] flex items-center">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/img/contact_bg.png" alt="Background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-slate-900/60 dark:bg-slate-950/80 backdrop-blur-[2px] bg-gradient-to-b from-transparent to-white dark:to-slate-950"></div>
             </div>
+            
+            <div class="container mx-auto relative z-10">
+                <div class="max-w-4xl mx-auto text-center fade-in">
+                    <h1 class="text-5xl md:text-7xl font-bold font-display mb-6 text-slate-900 dark:text-white leading-tight">Let's Talk <span class="text-primary italic">Voice</span></h1>
+                    <p class="text-slate-600 dark:text-slate-300 text-xl md:text-2xl max-w-2xl mx-auto font-medium">We're here to help you find the perfect voice or grow your career.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4">
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div class="lg:col-span-1 space-y-8 fade-in">
@@ -300,9 +311,9 @@
                 </div>
             </div>
 
-            <div class="pt-10 border-t border-slate-900 flex flex-row justify-between items-center gap-2 text-[10px] sm:text-xs text-slate-500">
+            <div class="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
                 <p>&copy; 2026 VoxTalent Inc.<span class="hidden sm:inline"> All rights reserved.</span></p>
-                <div class="flex items-center gap-3 sm:gap-8 flex-nowrap">
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-8">
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Cookie Policy</a>

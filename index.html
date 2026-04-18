@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -66,7 +66,7 @@
                     <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
                 </button>
                 <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle RTL">
-                    <i data-lucide="align-right" class="rtl-hidden w-5 h-5" title="Switch to RTL"></i><i data-lucide="align-left" class="rtl-only w-5 h-5" title="Switch to LTR"></i>
+                    <span class="rtl-hidden font-semibold text-sm px-1">RTL</span><span class="rtl-only font-semibold text-sm px-1">LTR</span>
                 </button>
                  <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     <i data-lucide="menu" class="w-6 h-6"></i>
@@ -93,7 +93,7 @@
             <a href="dashboard.html" class="menu-link">Dashboard</a>
         </nav>
         <div class="menu-login-area flex flex-col gap-4">
-            <a href="contact.html" class="btn-mobile-login">Get a Quote</a>
+            
             <a href="signup.html" class="w-full text-center py-4 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all">Sign Up</a>
         </div>
     </div>
@@ -110,11 +110,11 @@
             <div class="container mx-auto px-4 relative z-10">
                 <div class="max-w-3xl mx-auto text-center">
                     <div class="fade-in">
-                        <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30 font-semibold mb-6 text-sm uppercase tracking-wider">Premium Voice Talents</span>
-                        <h1 class="text-5xl md:text-7xl font-semibold font-display dark:text-white mb-6 leading-tight">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-indigo-200 border border-primary/30 font-semibold mb-6 text-sm uppercase tracking-wider">Premium Voice Talents</span>
+                        <h1 class="text-5xl md:text-7xl font-semibold font-display text-white mb-6 leading-tight">
                             Voiceover Solutions <br> For <span class="italic text-primary">Global Brands</span>
                         </h1>
-                        <p class="text-xl text-slate-600 dark:text-slate-300 mb-10 leading-relaxed">
+                        <p class="text-xl text-slate-200 mb-10 leading-relaxed">
                             Welcome to VoxTalent. We provide professional voiceovers for global brands, bringing scripts to life with authentic tone and broadcast-quality production.
                         </p>
                     </div>
@@ -153,7 +153,7 @@
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg">Commercial Reel</h3>
-                                <p class="text-sm text-slate-500">Fast-paced • Conversational</p>
+                                <p class="text-sm text-slate-500">Fast-paced ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ Conversational</p>
                             </div>
                             <button class="ml-auto w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all">
                                 <i data-lucide="play" class="w-5 h-5 fill-current"></i>
@@ -176,7 +176,7 @@
                             </div>
                             <div>
                                 <h3 class="font-semibold text-lg">Narration Reel</h3>
-                                <p class="text-sm text-slate-500">Calm • Educational • Authoritative</p>
+                                <p class="text-sm text-slate-500">Calm ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ Educational ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ Authoritative</p>
                             </div>
                             <button class="ml-auto w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                                 <i data-lucide="play" class="w-5 h-5 fill-current"></i>
@@ -200,7 +200,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-lg">Animation Reel</h3>
-                                    <p class="text-sm text-slate-500">High Energy • Character voices</p>
+                                    <p class="text-sm text-slate-500">High Energy ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ Character voices</p>
                                 </div>
                                 <button class="ml-auto w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                                     <i data-lucide="play" class="w-5 h-5 fill-current"></i>
@@ -356,10 +356,10 @@
     <!-- Footer -->
     <footer class="bg-slate-950 text-white pt-20 pb-10 border-t border-slate-800 mt-20">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Brand -->
-                <div class="col-span-2 md:col-span-1 space-y-6">
-                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary">
                         <i data-lucide="mic-2" class="w-8 h-8"></i>
                         <span class="whitespace-nowrap">Elena Rodriguez</span>
                     </a>
@@ -368,7 +368,7 @@
                     </p>
                     <div class="flex items-center gap-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
@@ -381,7 +381,8 @@
                         </a>
                     </div>
                 </div>
-                
+
+                <!-- Quick Links -->
                 <div>
                     <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Quick Links</h4>
                     <ul class="space-y-4 text-slate-400">
@@ -392,33 +393,35 @@
                         <li><a href="contact.html" class="hover:text-white transition-colors">Contact Me</a></li>
                     </ul>
                 </div>
-                
+
+                <!-- Resources -->
                 <div>
                     <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Resources</h4>
                     <ul class="space-y-4 text-slate-400">
                         <li><a href="#" class="hover:text-white transition-colors">Studio Setup</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Booking Guide</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Technical Specs</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="pricing.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-span-2 md:col-span-1">
-                    <h4 class="font-semibold text-lg mb-6">Join Our Newsletter</h4>
-                    <p class="text-slate-400 mb-6">Get weekly tips on audio production and industry trends.</p>
+
+                <!-- Newsletter -->
+                <div class="space-y-6">
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Join Our Newsletter</h4>
+                    <p class="text-slate-500 text-xs">Get weekly tips on audio production and industry trends.</p>
                     <form class="flex flex-col gap-3">
-                        <input type="email" placeholder="Your email address" class="bg-slate-800 border-none rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-primary outline-none">
-                        <button class="bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-all">Subscribe</button>
+                        <input type="email" placeholder="Your email address" class="bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-primary outline-none transition-all">
+                        <button type="submit" class="bg-primary text-white font-semibold py-3 rounded-xl hover:bg-primary-dark transition-all transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20">Subscribe</button>
                     </form>
                 </div>
             </div>
-            
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-sm text-slate-500 text-center md:text-left">
-                <p>&copy; 2026 VoxTalent.<span class="hidden sm:inline"> All rights reserved.</span></p>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
+                <p>&copy; 2026 Elena Rodriguez. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-3 sm:gap-8">
-                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>
-                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Cookie Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
                 </div>
             </div>
         </div>
@@ -428,3 +431,7 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+

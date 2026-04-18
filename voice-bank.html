@@ -35,7 +35,7 @@
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
                 <i data-lucide="mic-2" class="w-8 h-8"></i>
-                <span class="whitespace-nowrap">VoxTalent</span>
+                <span class="whitespace-nowrap">Elena Rodriguez</span>
             </a>
             <div class="hidden xl:flex items-center gap-8">
                 <a href="index.html" class="hover:text-primary transition-colors font-medium">Home</a>
@@ -50,7 +50,7 @@
             </div>
             <div class="flex items-center gap-3">
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="moon" class="hidden dark:block w-5 h-5"></i><i data-lucide="sun" class="block dark:hidden w-5 h-5"></i></button>
-                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="align-right" class="rtl-hidden w-5 h-5" title="Switch to RTL"></i><i data-lucide="align-left" class="rtl-only w-5 h-5" title="Switch to LTR"></i></button>
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><span class="rtl-hidden font-semibold text-sm px-1">RTL</span><span class="rtl-only font-semibold text-sm px-1">LTR</span></button>
                 <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="menu" class="w-6 h-6"></i></button>
             </div>
         </nav>
@@ -74,7 +74,7 @@
             <a href="dashboard.html" class="menu-link">Dashboard</a>
         </nav>
         <div class="menu-login-area flex flex-col gap-4">
-            <a href="contact.html" class="btn-mobile-login">Get a Quote</a>
+            
             <a href="signup.html" class="w-full text-center py-4 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all">Sign Up</a>
         </div>
     </div>
@@ -90,7 +90,7 @@
             
             <div class="container mx-auto px-4 relative z-10 text-center">
                 <div class="max-w-4xl mx-auto fade-in">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30 font-semibold mb-6 text-sm uppercase tracking-wider">Project Showcase</span>
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-indigo-200 border border-primary/30 font-semibold mb-6 text-sm uppercase tracking-wider">Project Showcase</span>
                     <h1 class="text-4xl md:text-7xl font-semibold font-display text-white mb-6 leading-tight">
                         My Featured <span class="italic text-primary">Work</span> <br> & Collaborations
                     </h1>
@@ -107,14 +107,14 @@
                 <!-- Simple Category Filter -->
                 <div class="flex flex-wrap justify-center gap-4">
                     <button class="px-8 py-3 rounded-xl bg-primary text-white font-semibold shadow-lg shadow-primary/30 transition-all">All Genres</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Commercial</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Corporate</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Animation</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">Audiobooks</button>
+                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Commercial</button>
+                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Corporate</button>
+                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Animation</button>
+                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Audiobooks</button>
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-12">
+            <div class="flex flex-col xl:flex-row gap-12">
                 <!-- Main Grid -->
                 <div class="flex-1">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 fade-in">
@@ -125,7 +125,7 @@
                                     <i data-lucide="play-circle" class="w-12 h-12"></i>
                                 </div>
                                 <h3 class="font-semibold text-xl mb-1">Brand Campaign: Global Tech</h3>
-                                <p class="text-xs text-slate-500 mb-4">Genre: Commercial • Tone: Energetic</p>
+                                <p class="text-xs text-slate-500 mb-4">Genre: Commercial &bull; Tone: Energetic</p>
                                 <div class="flex gap-2 flex-wrap justify-center">
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-semibold text-slate-500">YouTube Ad</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-semibold text-slate-500">Social Media</span>
@@ -153,7 +153,7 @@
                                     <i data-lucide="sparkles" class="w-12 h-12"></i>
                                 </div>
                                 <h3 class="font-semibold text-xl mb-1">Animated Series: Space Quest</h3>
-                                <p class="text-xs text-slate-500 mb-4">Genre: Animation • Role: Lead Protagonist</p>
+                                <p class="text-xs text-slate-500 mb-4">Genre: Animation &bull; Role: Lead Protagonist</p>
                                 <div class="flex gap-2 flex-wrap justify-center">
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-semibold text-slate-500">Character Voice</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-semibold text-slate-500">International Dub</span>
@@ -182,7 +182,7 @@
                                         <i data-lucide="film" class="w-12 h-12"></i>
                                     </div>
                                     <h3 class="font-semibold text-xl mb-1">Docu-Series: The Blue Planet</h3>
-                                    <p class="text-xs text-slate-500 mb-4">Genre: Narration • Tone: Calming • Authoritative</p>
+                                    <p class="text-xs text-slate-500 mb-4">Genre: Narration &bull; Tone: Calming &bull; Authoritative</p>
                                     <div class="flex gap-2 flex-wrap justify-center">
                                         <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-semibold text-slate-500">Documentary</span>
                                         <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-semibold text-slate-500">Educational</span>
@@ -215,40 +215,40 @@
                 </div>
 
                 <!-- Brand Sidebar -->
-                <aside class="w-full lg:w-80 mt-12 lg:mt-0 fade-in">
-                    <div class="bg-white dark:bg-slate-950 shadow-xl rounded-[2rem] p-8 border border-slate-100 dark:border-slate-800 sticky top-32">
-                        <h4 class="font-semibold text-lg mb-6 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-primary"></i> Trusted By</h4>
+                <aside class="w-full xl:w-80 mt-12 xl:mt-0 fade-in">
+                    <div class="bg-white dark:bg-slate-950 shadow-xl rounded-[2rem] p-8 border border-slate-100 dark:border-slate-800 xl:sticky top-32 md:max-w-md md:mx-auto lg:max-w-none">
+                        <h4 class="font-semibold text-lg mb-6 flex items-center gap-2 md:justify-center lg:justify-start"><i data-lucide="award" class="w-5 h-5 text-primary"></i> Trusted By</h4>
                         <ul class="space-y-6">
-                            <li class="flex items-center gap-4 group">
+                            <li class="flex items-center gap-4 group md:justify-center lg:justify-start">
                                 <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
                                     <i data-lucide="tv" class="w-6 h-6"></i>
                                 </div>
-                                <div class="flex-1">
+                                <div class="flex-1 lg:flex-none">
                                     <p class="font-semibold text-sm">Netflix</p>
                                     <p class="text-[10px] text-slate-500">Character VO</p>
                                 </div>
                             </li>
-                            <li class="flex items-center gap-4 group">
+                            <li class="flex items-center gap-4 group md:justify-center lg:justify-start">
                                 <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
                                     <i data-lucide="shopping-bag" class="w-6 h-6"></i>
                                 </div>
-                                <div class="flex-1">
+                                <div class="flex-1 lg:flex-none">
                                     <p class="font-semibold text-sm">Amazon</p>
                                     <p class="text-[10px] text-slate-500">Commercial Campaign</p>
                                 </div>
                             </li>
-                            <li class="flex items-center gap-4 group">
+                            <li class="flex items-center gap-4 group md:justify-center lg:justify-start">
                                 <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
                                     <i data-lucide="smartphone" class="w-6 h-6"></i>
                                 </div>
-                                <div class="flex-1">
+                                <div class="flex-1 lg:flex-none">
                                     <p class="font-semibold text-sm">Google</p>
                                     <p class="text-[10px] text-slate-500">Product Narration</p>
                                 </div>
                             </li>
                         </ul>
                         <div class="mt-10 pt-10 border-t border-slate-100 dark:border-slate-800 text-center">
-                             <p class="text-sm text-slate-500 mb-6 italic">"VoxTalent is our go-to for character diversity."</p>
+                             <p class="text-sm text-slate-500 mb-6 italic">"Elena Rodriguez is our go-to for character diversity."</p>
                              <a href="contact.html" class="bg-primary text-white w-full text-center py-4 rounded-xl font-semibold text-sm block shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all transform hover:scale-[1.02] hover:shadow-xl active:scale-95">Work with Me</a>
                         </div>
                     </div>
@@ -259,19 +259,19 @@
 
     <footer class="bg-slate-950 text-white pt-20 pb-10 border-t border-slate-800 mt-20">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Brand -->
-                <div class="col-span-2 md:col-span-1 space-y-6">
-                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary">
                         <i data-lucide="mic-2" class="w-8 h-8"></i>
-                        <span class="whitespace-nowrap">VoxTalent</span>
+                        <span class="whitespace-nowrap">Elena Rodriguez</span>
                     </a>
                     <p class="text-slate-500 text-sm leading-relaxed">
                         Professional voice actor specialized in commercials, animation, and corporate narration. Bringing stories to life with authenticity and precision.
                     </p>
                     <div class="flex items-center gap-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
@@ -289,40 +289,42 @@
                 <div>
                     <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Quick Links</h4>
                     <ul class="space-y-4 text-slate-400">
-                        <li><a href="voice-bank.html" class="hover:text-white transition-colors">Talent Roster</a></li>
-                        <li><a href="pricing.html" class="hover:text-white transition-colors text-primary">Membership Plans</a></li>
-                        <li><a href="services.html" class="hover:text-white transition-colors">Managed Casting</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="voice-bank.html" class="hover:text-white transition-colors">Client Showcase</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Me</a></li>
                     </ul>
                 </div>
 
-                <!-- Company -->
+                <!-- Resources -->
                 <div>
-                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Company</h4>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">News & Blog</a></li>
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Resources</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Studio Setup</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Booking Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Technical Specs</a></li>
+                        <li><a href="pricing.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
                     </ul>
                 </div>
 
-                <div class="col-span-2 md:col-span-1">
-                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-primary"></i> hello@voxtalent.com</li>
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-primary"></i> +44 (0) 7700 900000</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-primary"></i> Soho Studio, London, UK</li>
-                    </ul>
+                <!-- Newsletter -->
+                <div class="space-y-6">
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Join Our Newsletter</h4>
+                    <p class="text-slate-500 text-xs">Get weekly tips on audio production and industry trends.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your email address" class="bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-primary outline-none transition-all">
+                        <button type="submit" class="bg-primary text-white font-semibold py-3 rounded-xl hover:bg-primary-dark transition-all transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20">Subscribe</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
-                <p>&copy; 2026 VoxTalent.<span class="hidden sm:inline"> All rights reserved.</span></p>
+            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
+                <p>&copy; 2026 Elena Rodriguez. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-3 sm:gap-8">
-                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>
-                    <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Cookie Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | VoxTalent</title>
+    <title>Login | Elena Rodriguez</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <!-- Tailwind CSS -->
@@ -29,24 +29,25 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-900 dark:text-white flex items-center justify-center min-h-screen p-4 transition-colors duration-300">
+    <!-- Card Controls (Fixed at top-right) -->
+    <div class="fixed top-6 right-6 flex gap-2 z-50">
+        <button id="theme-toggle" class="p-3 bg-white dark:bg-slate-900 rounded-full shadow-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all transform hover:scale-110 active:scale-95 border border-slate-200 dark:border-slate-800">
+            <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
+            <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
+        </button>
+        <button id="rtl-toggle" class="p-3 bg-white dark:bg-slate-900 rounded-full shadow-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all transform hover:scale-110 active:scale-95 border border-slate-200 dark:border-slate-800">
+            <span class="rtl-hidden font-semibold text-xs px-1">RTL</span><span class="rtl-only font-semibold text-xs px-1">LTR</span>
+        </button>
+    </div>
+
     <!-- Login Card -->
     <div class="w-full max-w-md bg-white dark:bg-slate-950 rounded-[2.5rem] shadow-2xl p-8 md:p-12 relative fade-in">
-        <!-- Card Controls -->
-        <div class="flex justify-end w-full mb-4 -mt-4 gap-2">
-            <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
-                <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>
-            </button>
-            <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                <i data-lucide="align-right" class="rtl-hidden w-5 h-5" title="Switch to RTL"></i><i data-lucide="align-left" class="rtl-only w-5 h-5" title="Switch to LTR"></i>
-            </button>
-        </div>
 
         <!-- Brand Logo (links to home) -->
         <div class="flex flex-col items-center mb-10">
             <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary hover:opacity-80 transition-opacity mb-6">
                 <i data-lucide="mic-2" class="w-7 h-7"></i>
-                <span>VoxTalent</span>
+                <span>Elena Rodriguez</span>
             </a>
             <h1 class="text-2xl font-semibold font-display dark:text-white transition-colors">Welcome Back</h1>
             <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 transition-colors">Enter your credentials to access your account</p>
@@ -61,7 +62,7 @@
             <div>
                 <label class="block text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2 ml-1">Password</label>
                 <div class="relative">
-                    <input type="password" placeholder="••••••••" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all">
+                    <input type="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 p-4 rounded-xl outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all">
                     <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></button>
                 </div>
             </div>
@@ -109,3 +110,6 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+

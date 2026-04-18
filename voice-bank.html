@@ -35,7 +35,7 @@
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
                 <i data-lucide="mic-2" class="w-8 h-8"></i>
-                <span class="whitespace-nowrap">Elena Rodriguez</span>
+                <span class="whitespace-nowrap">VoxTalent</span>
             </a>
             <div class="hidden xl:flex items-center gap-8">
                 <a href="index.html" class="hover:text-primary transition-colors font-medium">Home</a>
@@ -80,9 +80,9 @@
     </div>
     <div class="mobile-overlay"></div>
 
-    <main class="pt-0">
+    <main class="pt-20">
         <!-- Hero Section (Redesigned for Talent Roster) -->
-        <section class="relative min-h-[70vh] flex items-center overflow-hidden pt-24 pb-20 lg:pt-0 lg:pb-0">
+        <section class="relative min-h-[80vh] flex items-center overflow-hidden py-20 md:py-28">
             <div class="absolute inset-0 z-0">
                 <img src="assets/img/hero-talent.png" alt="Recording Studio" class="w-full h-full object-cover brightness-[0.4] dark:brightness-[0.3]">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
@@ -97,21 +97,24 @@
                     <p class="text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">
                         Explore a curated selection of our latest voiceover projects for global brands, spanning commercials, corporate narration, and character work.
                     </p>
+
+                    <!-- Category Filter Inside Hero -->
+                    <div class="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4 mt-12 pb-10">
+                        <button class="px-6 py-3 rounded-xl bg-primary text-white font-semibold shadow-lg shadow-primary/30 transition-all text-sm md:text-base">All Genres</button>
+                        <button class="px-6 py-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-white font-semibold hover:bg-white/20 transition-all text-sm md:text-base">Commercial</button>
+                        <button class="px-6 py-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-white font-semibold hover:bg-white/20 transition-all text-sm md:text-base">Corporate</button>
+                        <button class="px-6 py-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-white font-semibold hover:bg-white/20 transition-all text-sm md:text-base">Animation</button>
+                        <button class="col-span-2 md:col-auto px-6 py-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-white font-semibold hover:bg-white/20 transition-all text-sm md:text-base mx-auto md:mx-0">Audiobooks</button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="container mx-auto px-4 mt-[-1.5rem] lg:mt-[-4rem] relative z-20">
-            <!-- Search & Trending Bar (Moved but preserved) -->
-            <div class="mb-12 fade-in">
-                <!-- Simple Category Filter -->
-                <div class="flex flex-wrap justify-center gap-4">
-                    <button class="px-8 py-3 rounded-xl bg-primary text-white font-semibold shadow-lg shadow-primary/30 transition-all">All Genres</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Commercial</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Corporate</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Animation</button>
-                    <button class="px-8 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-100 hover:text-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all">Audiobooks</button>
-                </div>
+        <div class="container mx-auto px-4 pt-12 relative z-20">
+            <!-- Search & Trending Bar (Moved content removed, logic remains) -->
+            <div class="mb-12 fade-in text-center">
+                 <h2 class="text-2xl font-semibold mb-2">Filter by Category</h2>
+                 <p class="text-slate-500 mb-8 max-w-lg mx-auto">Browse through specialized voiceover categories to find the exact tone and style you need.</p>
             </div>
 
             <div class="flex flex-col xl:flex-row gap-12">
@@ -216,32 +219,32 @@
 
                 <!-- Brand Sidebar -->
                 <aside class="w-full xl:w-80 mt-12 xl:mt-0 fade-in">
-                    <div class="bg-white dark:bg-slate-950 shadow-xl rounded-[2rem] p-8 border border-slate-100 dark:border-slate-800 xl:sticky top-32 md:max-w-md md:mx-auto lg:max-w-none">
-                        <h4 class="font-semibold text-lg mb-6 flex items-center gap-2 md:justify-center lg:justify-start"><i data-lucide="award" class="w-5 h-5 text-primary"></i> Trusted By</h4>
+                    <div class="bg-white dark:bg-slate-950 shadow-xl rounded-[2rem] p-8 border border-slate-100 dark:border-slate-800 xl:sticky top-32 md:max-w-md md:mx-auto xl:max-w-none">
+                        <h4 class="font-semibold text-lg mb-6 flex items-center gap-2 justify-center xl:justify-start text-center md:text-left"><i data-lucide="award" class="w-5 h-5 text-primary"></i> Trusted By</h4>
                         <ul class="space-y-6">
-                            <li class="flex items-center gap-4 group md:justify-center lg:justify-start">
+                            <li class="flex items-center gap-4 group justify-center xl:justify-start">
                                 <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
                                     <i data-lucide="tv" class="w-6 h-6"></i>
                                 </div>
-                                <div class="flex-1 lg:flex-none">
+                                <div class="flex-1 xl:flex-none">
                                     <p class="font-semibold text-sm">Netflix</p>
                                     <p class="text-[10px] text-slate-500">Character VO</p>
                                 </div>
                             </li>
-                            <li class="flex items-center gap-4 group md:justify-center lg:justify-start">
+                            <li class="flex items-center gap-4 group justify-center xl:justify-start">
                                 <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
                                     <i data-lucide="shopping-bag" class="w-6 h-6"></i>
                                 </div>
-                                <div class="flex-1 lg:flex-none">
+                                <div class="flex-1 xl:flex-none">
                                     <p class="font-semibold text-sm">Amazon</p>
                                     <p class="text-[10px] text-slate-500">Commercial Campaign</p>
                                 </div>
                             </li>
-                            <li class="flex items-center gap-4 group md:justify-center lg:justify-start">
+                            <li class="flex items-center gap-4 group justify-center xl:justify-start">
                                 <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
                                     <i data-lucide="smartphone" class="w-6 h-6"></i>
                                 </div>
-                                <div class="flex-1 lg:flex-none">
+                                <div class="flex-1 xl:flex-none">
                                     <p class="font-semibold text-sm">Google</p>
                                     <p class="text-[10px] text-slate-500">Product Narration</p>
                                 </div>
@@ -264,7 +267,7 @@
                 <div class="space-y-6">
                     <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary">
                         <i data-lucide="mic-2" class="w-8 h-8"></i>
-                        <span class="whitespace-nowrap">Elena Rodriguez</span>
+                        <span class="whitespace-nowrap">VoxTalent</span>
                     </a>
                     <p class="text-slate-500 text-sm leading-relaxed">
                         Professional voice actor specialized in commercials, animation, and corporate narration. Bringing stories to life with authenticity and precision.
@@ -320,7 +323,7 @@
             </div>
 
             <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
-                <p>&copy; 2026 Elena Rodriguez. All rights reserved.</p>
+                <p>&copy; 2026 VoxTalent. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-3 sm:gap-8">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>

@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Theme Management
   const themeToggle = document.getElementById('theme-toggle');
   const htmlElement = document.documentElement;
-  
+
   // Check for saved theme or system preference
   const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  
+
   if (currentTheme === 'dark') {
     htmlElement.classList.add('dark');
   }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', toggleMenu);
   }
-  
+
   if (mobileCloseBtn) {
     mobileCloseBtn.addEventListener('click', toggleMenu);
   }
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // =============================================
   // BACK TO TOP BUTTON LOGIC
   // =============================================
-  
+
   const createBackToTop = () => {
     // Check if it already exists to avoid duplicates
     if (document.getElementById('back-to-top')) return;
@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.id = 'back-to-top';
     btn.setAttribute('role', 'button');
     btn.setAttribute('aria-label', 'Back to top');
-    
+
     // Using Lucide Chevron Up icon - it will be initialized by the global lucide.createIcons() call
     // if we haven't already run it, or we can manually trigger it for this element.
     btn.innerHTML = '<i data-lucide="chevron-up"></i>';
-    
+
     document.body.appendChild(btn);
 
     // Re-run lucide to iconify the new element
@@ -143,17 +143,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // FAQ Accordion Toggle
   const faqToggles = document.querySelectorAll('.faq-toggle');
-  
+
   faqToggles.forEach(toggle => {
     toggle.addEventListener('click', () => {
       const faqItem = toggle.closest('.faq-item');
       const isActive = faqItem.classList.contains('active');
-      
+
       // Close all other FAQ items
       document.querySelectorAll('.faq-item').forEach(item => {
         item.classList.remove('active');
       });
-      
+
       // Toggle the clicked item
       if (!isActive) {
         faqItem.classList.add('active');

@@ -29,28 +29,28 @@
     <link rel="stylesheet" href="assets/css/global.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-white text-slate-900 dark:bg-black dark:text-slate-100 transition-colors duration-300">
     <!-- Header (Shared) -->
     <header class="fixed top-0 w-full z-50 glass">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
                 <i data-lucide="mic-2" class="w-8 h-8"></i>
-                <span>VoxTalent</span>
+                <span class="whitespace-nowrap">VoxTalent</span>
             </a>
             <div class="hidden xl:flex items-center gap-8">
-                <a href="index.html" class="hover:text-primary transition-colors font-medium">Home 1</a>
+                <a href="index.html" class="hover:text-primary transition-colors font-medium">Home</a>
                 <a href="home-2.html" class="hover:text-primary transition-colors font-medium">Home 2</a>
                 <a href="about.html" class="hover:text-primary transition-colors font-medium">About</a>
+                <a href="voice-bank.html" class="hover:text-primary transition-colors font-medium">Showcase</a>
                 <a href="services.html" class="text-primary font-medium">Services</a>
-                <a href="voice-bank.html" class="hover:text-primary transition-colors font-medium">Talent Roster</a>
+                <a href="pricing.html" class="hover:text-primary transition-colors font-medium">Pricing</a>
                 <a href="contact.html" class="hover:text-primary transition-colors font-medium">Contact</a>
-                <a href="login.html" class="btn-secondary py-2 px-4 text-sm transform hover:scale-105">Login</a>
-                <a href="signup.html" class="btn-primary py-2 px-4 text-sm transform hover:scale-105">Sign Up</a>
-                <a href="dashboard.html" class="hover:text-primary transition-colors font-medium border-l pl-8 dark:border-slate-700">Dashboard</a>
+                <a href="dashboard.html" class="hover:text-primary transition-colors font-medium">Dashboard</a>
+                <a href="signup.html" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-primary-dark transition-all shadow-lg shadow-primary/20">Sign Up</a>
             </div>
             <div class="flex items-center gap-3">
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="moon" class="hidden dark:block w-5 h-5"></i><i data-lucide="sun" class="block dark:hidden w-5 h-5"></i></button>
-                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="languages" class="w-5 h-5"></i></button>
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="align-right" class="rtl-hidden w-5 h-5" title="Switch to RTL"></i><i data-lucide="align-left" class="rtl-only w-5 h-5" title="Switch to LTR"></i></button>
                 <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </nav>
     </header>
@@ -63,17 +63,18 @@
             </button>
         </div>
         <nav class="menu-nav-list">
-            <a href="index.html" class="menu-link">Home 1</a>
+            <a href="index.html" class="menu-link">Home</a>
             <a href="home-2.html" class="menu-link">Home 2</a>
             <a href="about.html" class="menu-link">About</a>
+            <a href="voice-bank.html" class="menu-link">Showcase</a>
             <a href="services.html" class="menu-link active"><span>Services</span></a>
-            <a href="voice-bank.html" class="menu-link">Talent Roster</a>
+            <a href="pricing.html" class="menu-link">Pricing</a>
             <a href="contact.html" class="menu-link">Contact</a>
             <a href="dashboard.html" class="menu-link">Dashboard</a>
         </nav>
-        <div class="menu-login-area">
-            <a href="login.html" class="btn-mobile-login">Login</a>
-            <a href="signup.html" class="menu-link" style="font-size:0.85rem; padding:0.5rem 0;">Sign Up</a>
+        <div class="menu-login-area flex flex-col gap-4">
+            <a href="contact.html" class="btn-mobile-login">Get a Quote</a>
+            <a href="signup.html" class="w-full text-center py-4 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all">Sign Up</a>
         </div>
     </div>
     <div class="mobile-overlay"></div>
@@ -89,11 +90,11 @@
             <!-- Glow Orb -->
             <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 z-10"></div>
             <div class="container mx-auto px-4 relative z-20 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold font-display mb-6 fade-in">Comprehensive Audio Solutions</h1>
-                <p class="text-xl text-slate-200 max-w-2xl mx-auto mb-10 fade-in">From first script to final master, we provide everything you need for world-class voiceover production.</p>
+                <h1 class="text-4xl md:text-6xl font-semibold font-display mb-6 fade-in">Professional Voice Services</h1>
+                <p class="text-xl text-slate-200 max-w-2xl mx-auto mb-10 fade-in">From high-energy commercials to long-form narration, I provide broadcast-quality audio from my professional home studio.</p>
                 <div class="flex justify-center gap-4 fade-in">
-                    <a href="#services-list" class="bg-white text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary-dark hover:text-white transition-all shadow-lg hover:shadow-primary/50">Explore Services</a>
-                    <a href="contact.html" class="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-primary transition-all shadow-lg">Request Quote</a>
+                    <a href="#services-list" class="bg-primary text-white px-8 py-3 rounded-xl font-semibold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/50">My Specialties</a>
+                    <a href="contact.html" class="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all shadow-lg">Request a Quote</a>
                 </div>
             </div>
         </section>
@@ -105,51 +106,41 @@
                     <!-- Service 1 -->
                     <div class="fade-in text-center w-full md:w-[calc(45%)] lg:w-[calc(30%)] transition-all hover:scale-105">
                         <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="mic" class="w-8 h-8"></i></div>
-                        <h3 class="text-2xl font-bold mb-4">Voiceover Recording</h3>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">High-fidelity recordings from our vetted global roster of 10,000+ actors. Covering 150+ languages and every possible accent.</p>
-                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-bold text-slate-500">
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>48kHz Broadcast Quality</li>
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Multiple Language Options</li>
+                        <h3 class="text-2xl font-semibold mb-4">Commercial VO</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Cutting through the noise with energetic, authoritative, or conversational tones for TV, radio, and digital ads.</p>
+                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-semibold text-slate-500">
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>High Impact Ads</li>
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Social Media Campaigns</li>
                         </ul>
                     </div>
                     <!-- Service 2 -->
                     <div class="fade-in text-center w-full md:w-[calc(45%)] lg:w-[calc(30%)] transition-all hover:scale-105" style="transition-delay: 100ms;">
-                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="waves" class="w-8 h-8"></i></div>
-                        <h3 class="text-2xl font-bold mb-4">Editing & Mastering</h3>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Post-production services to ensure your audio is crisp, clean, and ready for use. Breath removal, EQ, compression in 2026.</p>
-                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-bold text-slate-500">
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Breath & Noise Removal</li>
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>LUFS Level Normalization</li>
+                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="smile" class="w-8 h-8"></i></div>
+                        <h3 class="text-2xl font-semibold mb-4">Animation & Gaming</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Bringing characters to life with a wide range of emotions and unique vocal textures for stories and games.</p>
+                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-semibold text-slate-500">
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Character Development</li>
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>NPC & Lead Roles</li>
                         </ul>
                     </div>
                     <!-- Service 3 -->
                     <div class="fade-in text-center w-full md:w-[calc(45%)] lg:w-[calc(30%)] transition-all hover:scale-105" style="transition-delay: 200ms;">
-                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="languages" class="w-8 h-8"></i></div>
-                        <h3 class="text-2xl font-bold mb-4">Translation & Localization</h3>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Expert translation of your scripts ensuring cultural nuances and timing are preserved for international markets.</p>
-                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-bold text-slate-500">
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Native Speaker Review</li>
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Time-Sync Translation</li>
+                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="book-open" class="w-8 h-8"></i></div>
+                        <h3 class="text-2xl font-semibold mb-4">Corporate & Narration</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Professional and trustworthy narration for e-learning, internal communications, and documentaries.</p>
+                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-semibold text-slate-500">
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>E-Learning Modules</li>
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Explainer Videos</li>
                         </ul>
                     </div>
                     <!-- Service 4 -->
                     <div class="fade-in text-center w-full md:w-[calc(45%)] lg:w-[calc(30%)] transition-all hover:scale-105">
-                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="video" class="w-8 h-8"></i></div>
-                        <h3 class="text-2xl font-bold mb-4">Live Directed Sessions</h3>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Direct your talent in real-time via Zoom, Source-Connect, or Google Meet. Get exactly the performance you need on.</p>
-                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-bold text-slate-500">
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>High-Quality Audio Stream</li>
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Instant Feedback & Retakes</li>
-                        </ul>
-                    </div>
-                    <!-- Service 5 -->
-                    <div class="fade-in text-center w-full md:w-[calc(45%)] lg:w-[calc(30%)] transition-all hover:scale-105" style="transition-delay: 100ms;">
-                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="users" class="w-8 h-8"></i></div>
-                        <h3 class="text-2xl font-bold mb-4">Custom Audition Casting</h3>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Our casting experts hand-pick the best talent for your project, saving you hours of listening to auditions.</p>
-                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-bold text-slate-500">
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Vetted Shortlists</li>
-                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Talent Availability Checks</li>
+                        <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 mx-auto"><i data-lucide="headphones" class="w-8 h-8"></i></div>
+                        <h3 class="text-2xl font-semibold mb-4">Remote Direction</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Direct me in real-time from anywhere in the world using Source-Connect, Cleanfeed, Zoom, or Google Meet.</p>
+                        <ul class="w-64 mx-auto text-left space-y-3 text-sm font-semibold text-slate-500">
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Live Directed Sessions</li>
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>Instant File Delivery</li>
                         </ul>
                     </div>
                 </div>
@@ -157,20 +148,20 @@
         </section>
 
         <!-- FAQ Area -->
-        <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <section class="py-24 bg-slate-50 dark:bg-slate-950/50">
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold font-display mb-12 text-center fade-in">Frequently Asked Questions</h2>
+                    <h2 class="text-3xl font-semibold font-display mb-12 text-center fade-in">Frequently Asked Questions</h2>
                     <div class="space-y-4 fade-in">
-                        <details class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 open:shadow-xl transition-all duration-300">
-                            <summary class="p-6 cursor-pointer font-bold flex justify-between items-center group">
+                        <details class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-700 open:shadow-xl transition-all duration-300">
+                            <summary class="p-6 cursor-pointer font-semibold flex justify-between items-center group">
                                 <span class="truncate pr-4">What is the standard turnaround time?</span>
                                 <i data-lucide="chevron-down" class="w-5 h-5 group-open:rotate-180 transition-transform shrink-0"></i>
                             </summary>
                             <div class="p-6 pt-0 text-slate-600 dark:text-slate-400">Most commercial projects are delivered within 24 hours. For longer audiobooks or complex video games, we will provide a custom timeline.</div>
                         </details>
-                        <details class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 open:shadow-xl transition-all duration-300">
-                            <summary class="p-6 cursor-pointer font-bold flex justify-between items-center group">
+                        <details class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-700 open:shadow-xl transition-all duration-300">
+                            <summary class="p-6 cursor-pointer font-semibold flex justify-between items-center group">
                                 <span class="truncate pr-4">Do I own the rights to the audio?</span>
                                 <i data-lucide="chevron-down" class="w-5 h-5 group-open:rotate-180 transition-transform shrink-0"></i>
                             </summary>
@@ -186,12 +177,12 @@
             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Brand -->
                 <div class="col-span-2 md:col-span-1 space-y-6">
-                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
                         <i data-lucide="mic-2" class="w-8 h-8"></i>
-                        <span>VoxTalent</span>
+                        <span class="whitespace-nowrap">VoxTalent</span>
                     </a>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        The world's leading platform for professional voice acting. We connect global brands with the perfect voices for every story.
+                        Professional voice actor specialized in commercials, animation, and corporate narration. Bringing stories to life with authenticity and precision.
                     </p>
                     <div class="flex items-center gap-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
@@ -211,18 +202,18 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Navigation</h4>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a href="index.html" class="hover:text-primary transition-colors">Client Home</a></li>
-                        <li><a href="home-2.html" class="hover:text-primary transition-colors">Talent Home</a></li>
-                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
-                        <li><a href="voice-bank.html" class="hover:text-primary transition-colors">Talent Roster</a></li>
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="voice-bank.html" class="hover:text-white transition-colors">Talent Roster</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors text-primary">Membership Plans</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Managed Casting</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <!-- Company -->
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Company</h4>
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Company</h4>
                     <ul class="space-y-4 text-sm text-slate-500">
                         <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
@@ -232,17 +223,17 @@
                 </div>
 
                 <div class="col-span-2 md:col-span-1">
-                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
                     <ul class="space-y-4 text-sm text-slate-500">
                         <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-primary"></i> hello@voxtalent.com</li>
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-primary"></i> +44 (0) 20 7946 0000</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-primary"></i> Soho, London, UK</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-primary"></i> +44 (0) 7700 900000</li>
+                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-primary"></i> Soho Studio, London, UK</li>
                     </ul>
                 </div>
             </div>
 
             <div class="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
-                <p>&copy; 2026 VoxTalent Inc.<span class="hidden sm:inline"> All rights reserved.</span></p>
+                <p>&copy; 2026 VoxTalent.<span class="hidden sm:inline"> All rights reserved.</span></p>
                 <div class="flex flex-wrap justify-center gap-3 sm:gap-8">
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>

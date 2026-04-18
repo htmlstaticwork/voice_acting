@@ -29,28 +29,28 @@
     <link rel="stylesheet" href="assets/css/global.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-white text-slate-900 dark:bg-black dark:text-slate-100 transition-colors duration-300">
     <!-- Header (Shared) -->
     <header class="fixed top-0 w-full z-50 glass">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
                 <i data-lucide="mic-2" class="w-8 h-8"></i>
-                <span>VoxTalent</span>
+                <span class="whitespace-nowrap">VoxTalent</span>
             </a>
             <div class="hidden xl:flex items-center gap-8">
-                <a href="index.html" class="hover:text-primary transition-colors font-medium">Home 1</a>
+                <a href="index.html" class="hover:text-primary transition-colors font-medium">Home</a>
                 <a href="home-2.html" class="hover:text-primary transition-colors font-medium">Home 2</a>
                 <a href="about.html" class="text-primary font-medium">About</a>
+                <a href="voice-bank.html" class="hover:text-primary transition-colors font-medium">Showcase</a>
                 <a href="services.html" class="hover:text-primary transition-colors font-medium">Services</a>
-                <a href="voice-bank.html" class="hover:text-primary transition-colors font-medium">Talent Roster</a>
+                <a href="pricing.html" class="hover:text-primary transition-colors font-medium">Pricing</a>
                 <a href="contact.html" class="hover:text-primary transition-colors font-medium">Contact</a>
-                <a href="login.html" class="btn-secondary py-2 px-4 text-sm transform hover:scale-105">Login</a>
-                <a href="signup.html" class="btn-primary py-2 px-4 text-sm transform hover:scale-105">Sign Up</a>
-                <a href="dashboard.html" class="hover:text-primary transition-colors font-medium border-l pl-8 dark:border-slate-700">Dashboard</a>
+                <a href="dashboard.html" class="hover:text-primary transition-colors font-medium">Dashboard</a>
+                <a href="signup.html" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-primary-dark transition-all shadow-lg shadow-primary/20">Sign Up</a>
             </div>
             <div class="flex items-center gap-3">
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="moon" class="hidden dark:block w-5 h-5"></i><i data-lucide="sun" class="block dark:hidden w-5 h-5"></i></button>
-                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="languages" class="w-5 h-5"></i></button>
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="align-right" class="rtl-hidden w-5 h-5" title="Switch to RTL"></i><i data-lucide="align-left" class="rtl-only w-5 h-5" title="Switch to LTR"></i></button>
                 <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><i data-lucide="menu" class="w-6 h-6"></i></button>
             </div>
         </nav>
@@ -64,17 +64,18 @@
             </button>
         </div>
         <nav class="menu-nav-list">
-            <a href="index.html" class="menu-link">Home 1</a>
+            <a href="index.html" class="menu-link">Home</a>
             <a href="home-2.html" class="menu-link">Home 2</a>
             <a href="about.html" class="menu-link active"><span>About</span></a>
+            <a href="voice-bank.html" class="menu-link">Showcase</a>
             <a href="services.html" class="menu-link">Services</a>
-            <a href="voice-bank.html" class="menu-link">Talent Roster</a>
+            <a href="pricing.html" class="menu-link">Pricing</a>
             <a href="contact.html" class="menu-link">Contact</a>
             <a href="dashboard.html" class="menu-link">Dashboard</a>
         </nav>
-        <div class="menu-login-area">
-            <a href="login.html" class="btn-mobile-login">Login</a>
-            <a href="signup.html" class="menu-link" style="font-size:0.85rem; padding:0.5rem 0;">Sign Up</a>
+        <div class="menu-login-area flex flex-col gap-4">
+            <a href="contact.html" class="btn-mobile-login">Get a Quote</a>
+            <a href="signup.html" class="w-full text-center py-4 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all">Sign Up</a>
         </div>
     </div>
     <div class="mobile-overlay"></div>
@@ -88,24 +89,22 @@
             </div>
             
             <div class="container mx-auto px-4 relative z-10 text-center">
-                <div class="max-w-4xl mx-auto fade-in">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30 font-bold mb-6 text-sm uppercase tracking-wider">Our Mission</span>
-                    <h1 class="text-4xl md:text-7xl font-bold font-display text-white mb-6 leading-tight">
-                        Empowering Global Voices, <br> <span class="italic text-primary">One Project at a Time.</span>
-                    </h1>
-                    <p class="text-xl text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-                        Founded in 2018, VoxTalent was born out of a simple observation: the world is becoming more digital, yet the human connection through voice is more important than ever. We've built the most technologically advanced platform to bridge the gap between world-class voice actors and visionary creators.
-                    </p>
+                    <div class="fade-in">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30 font-semibold mb-6 text-sm uppercase tracking-wider">Our Story</span>
+                        <h2 class="text-3xl md:text-5xl font-semibold font-display text-white mb-8 leading-tight">Elite Voiceovers <br> Built on <span class="italic text-primary">Excellence</span></h2>
+                        <p class="text-xl text-slate-200 mb-8 leading-relaxed">
+                            VoxTalent is a premium voiceover service with over 10 years of collective experience. From our broadcast-quality studios, we collaborate with directors and brands worldwide to deliver authentic, high-impact voiceovers for commercials, animation, and beyond.
+                        </p>
                     
                     <div class="mt-12 flex items-center justify-center gap-12 text-slate-400">
                         <div class="text-center">
-                             <span class="text-3xl md:text-4xl font-bold text-white block mb-1">150+</span>
-                             <span class="text-xs uppercase tracking-widest font-bold">Languages</span>
+                             <span class="text-3xl md:text-4xl font-semibold text-white block mb-1">10+</span>
+                             <span class="text-xs uppercase tracking-widest font-semibold">Years Experience</span>
                         </div>
                         <div class="w-px h-10 bg-slate-700"></div>
                         <div class="text-center">
-                             <span class="text-3xl md:text-4xl font-bold text-white block mb-1">10k+</span>
-                             <span class="text-xs uppercase tracking-widest font-bold">Rostered Talent</span>
+                             <span class="text-3xl md:text-4xl font-semibold text-white block mb-1">500+</span>
+                             <span class="text-xs uppercase tracking-widest font-semibold">Projects Delivered</span>
                         </div>
                     </div>
                 </div>
@@ -113,10 +112,10 @@
         </section>
 
         <!-- The Story (Timeline) -->
-        <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <section class="py-24 bg-slate-50 dark:bg-slate-950/50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">Our Journey</h2>
+                    <h2 class="text-3xl md:text-4xl font-semibold font-display mb-4">Our Journey</h2>
                     <p class="text-slate-600 dark:text-slate-400">How we grew from a small studio to a global marketplace.</p>
                 </div>
                 <div class="max-w-4xl mx-auto relative">
@@ -125,38 +124,38 @@
                     <div class="space-y-16">
                         <div class="relative flex flex-col md:flex-row items-center gap-8 fade-in">
                             <div class="md:w-1/2 text-right hidden md:block">
-                                <h4 class="text-2xl font-bold text-primary">2018</h4>
-                                <p class="text-slate-500">The first spark. VoxTalent was founded in a small garage in Bristol.</p>
+                                <h4 class="text-2xl font-semibold text-primary">2014</h4>
+                                <p class="text-slate-500">The Beginning. Starting my career in local radio and theater.</p>
                             </div>
                             <div class="w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-slate-800 z-10 shrink-0"></div>
                             <div class="md:w-1/2">
-                                <h4 class="text-2xl font-bold text-primary md:hidden">2018</h4>
-                                <h4 class="text-xl font-bold mb-2">Founding Day</h4>
-                                <p class="text-slate-600 dark:text-slate-400">Launched with only 50 voice actors and a dream to simplify casting.</p>
+                                <h4 class="text-2xl font-semibold text-primary md:hidden">2014</h4>
+                                <h4 class="text-xl font-semibold mb-2">First Voice Session</h4>
+                                <p class="text-slate-600 dark:text-slate-400">I discovered my passion for voice acting during a chance session at a local studio in London.</p>
                             </div>
                         </div>
                         <div class="relative flex flex-col md:flex-row-reverse items-center gap-8 fade-in">
                             <div class="md:w-1/2 text-left hidden md:block">
-                                <h4 class="text-2xl font-bold text-primary">2020</h4>
-                                <p class="text-slate-500">Going global. We reached 1,000 active talent members.</p>
+                                <h4 class="text-2xl font-semibold text-primary">2019</h4>
+                                <p class="text-slate-500">Going Independent. Building my first professional home studio.</p>
                             </div>
                             <div class="w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-slate-800 z-10 shrink-0"></div>
                             <div class="md:w-1/2 md:text-right">
-                                <h4 class="text-2xl font-bold text-primary md:hidden">2020</h4>
-                                <h4 class="text-xl font-bold mb-2">Global Expansion</h4>
-                                <p class="text-slate-600 dark:text-slate-400">Expanded to include 50+ languages and accents from around the world.</p>
+                                <h4 class="text-2xl font-semibold text-primary md:hidden">2019</h4>
+                                <h4 class="text-xl font-semibold mb-2">Full-Time Voice Actor</h4>
+                                <p class="text-slate-600 dark:text-slate-400">Transitioned to full-time voice acting, working with clients across Europe and the US.</p>
                             </div>
                         </div>
                         <div class="relative flex flex-col md:flex-row items-center gap-8 fade-in">
                             <div class="md:w-1/2 text-right hidden md:block">
-                                <h4 class="text-2xl font-bold text-primary">2023</h4>
-                                <p class="text-slate-500">The Tech Leap. Launched AI-powered matching algorithms.</p>
+                                <h4 class="text-2xl font-semibold text-primary">2023</h4>
+                                <p class="text-slate-500">Global Reach. Reaching the milestone of 500+ successful projects.</p>
                             </div>
                             <div class="w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-slate-800 z-10 shrink-0"></div>
                             <div class="md:w-1/2">
-                                <h4 class="text-2xl font-bold text-primary md:hidden">2023</h4>
-                                <h4 class="text-xl font-bold mb-2">AI Innovation</h4>
-                                <p class="text-slate-600 dark:text-slate-400">Revolutionized the audition process with smart matching technology.</p>
+                                <h4 class="text-2xl font-semibold text-primary md:hidden">2023</h4>
+                                <h4 class="text-xl font-semibold mb-2">Agency Representation</h4>
+                                <p class="text-slate-600 dark:text-slate-400">Collaborating with top creative agencies on world-class animation and commercial projects.</p>
                             </div>
                         </div>
                     </div>
@@ -164,33 +163,28 @@
             </div>
         </section>
 
-        <!-- Meet the Team -->
+        <!-- In the Studio -->
         <section class="py-24">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">The Humans Behind the Mic</h2>
-                    <p class="text-slate-600 dark:text-slate-400">A diverse team of audio engineers, developers, and voice experts.</p>
+                    <h2 class="text-3xl md:text-4xl font-semibold font-display mb-4">In the Studio</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Broadcast-quality technical expertise for your production.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center fade-in">
-                        <img src="assets/img/actor-elena.png" alt="Team" class="w-full aspect-square rounded-3xl object-cover mb-6 grayscale hover:grayscale-0 transition-all">
-                        <h4 class="font-bold text-xl">Elena Vance</h4>
-                        <p class="text-primary text-sm font-bold uppercase">CEO & Founder</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="fade-in">
+                         <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6"><i data-lucide="mic" class="w-8 h-8"></i></div>
+                         <h4 class="font-semibold text-xl mb-4">Professional Gear</h4>
+                         <p class="text-slate-500">Recording with a Neumann U87 Ai and Apollo Twin X interface for pristine, professional sound.</p>
                     </div>
-                    <div class="text-center fade-in" style="transition-delay: 100ms;">
-                        <img src="assets/img/actor-marcus.png" alt="Team" class="w-full aspect-square rounded-3xl object-cover mb-6 grayscale hover:grayscale-0 transition-all">
-                        <h4 class="font-bold text-xl">James Sterling</h4>
-                        <p class="text-primary text-sm font-bold uppercase">Head of Audio</p>
+                    <div class="fade-in" style="transition-delay: 100ms;">
+                         <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                         <h4 class="font-semibold text-xl mb-4">Acoustic Treatment</h4>
+                         <p class="text-slate-500">Double-walled isolation booth with professional acoustic treatment for zero noise floor.</p>
                     </div>
-                    <div class="text-center fade-in" style="transition-delay: 200ms;">
-                        <img src="assets/img/actor-sophia.png" alt="Team" class="w-full aspect-square rounded-3xl object-cover mb-6 grayscale hover:grayscale-0 transition-all">
-                        <h4 class="font-bold text-xl">Mina Oh</h4>
-                        <p class="text-primary text-sm font-bold uppercase">CTO</p>
-                    </div>
-                    <div class="text-center fade-in" style="transition-delay: 300ms;">
-                        <img src="assets/img/actor-liam.png" alt="Team" class="w-full aspect-square rounded-3xl object-cover mb-6 grayscale hover:grayscale-0 transition-all">
-                        <h4 class="font-bold text-xl">Sanjay Patel</h4>
-                        <p class="text-primary text-sm font-bold uppercase">Community Lead</p>
+                    <div class="fade-in" style="transition-delay: 200ms;">
+                         <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6"><i data-lucide="zap" class="w-8 h-8"></i></div>
+                         <h4 class="font-semibold text-xl mb-4">Fast Turnaround</h4>
+                         <p class="text-slate-500">Most files delivered within 24 hours. Multiple formats available including WAV, AIFF, and MP3.</p>
                     </div>
                 </div>
             </div>
@@ -201,26 +195,26 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col lg:flex-row gap-20">
                     <div class="lg:w-1/3 fade-in">
-                        <h2 class="text-3xl font-bold font-display mb-6">Get in Touch</h2>
+                        <h2 class="text-3xl font-semibold font-display mb-6">Get in Touch</h2>
                         <p class="text-slate-400 mb-10">Have questions about our platform or enterprise solutions? Our team is here to help.</p>
                         <ul class="flex flex-col md:flex-row lg:flex-col gap-6 md:gap-8 lg:gap-6">
                             <li class="flex items-center gap-4">
                                 <div class="w-12 h-12 bg-primary/20 text-primary rounded-xl flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-6 h-6"></i></div>
-                                <div><p class="text-sm font-bold text-slate-500 uppercase">Support</p><p class="font-bold">support@voxtalent.com</p></div>
+                                <div><p class="text-sm font-semibold text-slate-500 uppercase">Support</p><p class="font-semibold">support@voxtalent.com</p></div>
                             </li>
                             <li class="flex items-center gap-4">
                                 <div class="w-12 h-12 bg-primary/20 text-primary rounded-xl flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
-                                <div><p class="text-sm font-bold text-slate-500 uppercase">Headquarters</p><p class="font-bold">123 Audio Lane, London, UK</p></div>
+                                <div><p class="text-sm font-semibold text-slate-500 uppercase">Headquarters</p><p class="font-semibold">123 Audio Lane, London, UK</p></div>
                             </li>
                         </ul>
                     </div>
                     <div class="lg:w-2/3 fade-in">
-                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl">
-                            <div class="md:col-span-1"><label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Full Name</label><input type="text" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></div>
-                            <div class="md:col-span-1"><label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Email Address</label><input type="email" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></div>
-                            <div class="md:col-span-2"><label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Subject</label><input type="text" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></div>
-                            <div class="md:col-span-2"><label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Message</label><textarea rows="5" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></textarea></div>
-                            <div class="md:col-span-2"><button class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-primary-dark transition-all">Send Message</button></div>
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-2xl">
+                            <div class="md:col-span-1"><label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Full Name</label><input type="text" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></div>
+                            <div class="md:col-span-1"><label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Email Address</label><input type="email" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></div>
+                            <div class="md:col-span-2"><label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Subject</label><input type="text" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></div>
+                            <div class="md:col-span-2"><label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Message</label><textarea rows="5" class="w-full bg-slate-50 dark:bg-slate-700 p-4 rounded-xl border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-primary text-slate-900 dark:text-white transition-all"></textarea></div>
+                            <div class="md:col-span-2"><button class="w-full bg-primary text-white py-4 rounded-xl font-semibold hover:bg-primary-dark transition-all">Send Message</button></div>
                         </form>
                     </div>
                 </div>
@@ -234,12 +228,12 @@
             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Brand -->
                 <div class="col-span-2 md:col-span-1 space-y-6">
-                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold font-display text-primary">
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold font-display text-primary flex-shrink-0">
                         <i data-lucide="mic-2" class="w-8 h-8"></i>
-                        <span>VoxTalent</span>
+                        <span class="whitespace-nowrap">VoxTalent</span>
                     </a>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        The world's leading platform for professional voice acting. We connect global brands with the perfect voices for every story.
+                        Professional voice actor specialized in commercials, animation, and corporate narration. Bringing stories to life with authenticity and precision.
                     </p>
                     <div class="flex items-center gap-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-all text-white">
@@ -259,38 +253,38 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Navigation</h4>
-                    <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a href="index.html" class="hover:text-primary transition-colors">Client Home</a></li>
-                        <li><a href="home-2.html" class="hover:text-primary transition-colors">Talent Home</a></li>
-                        <li><a href="services.html" class="hover:text-primary transition-colors">Our Services</a></li>
-                        <li><a href="voice-bank.html" class="hover:text-primary transition-colors">Talent Roster</a></li>
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="voice-bank.html" class="hover:text-white transition-colors">Talent Roster</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition-colors text-primary">Membership Plans</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Managed Casting</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <!-- Company -->
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Company</h4>
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Resources</h4>
                     <ul class="space-y-4 text-sm text-slate-500">
-                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Studio Setup</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Booking Guide</a></li>
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">News & Blog</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div class="col-span-2 md:col-span-1">
-                    <h4 class="font-bold text-lg mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
+                    <h4 class="font-semibold text-lg mb-6 text-white uppercase tracking-wider">Get in Touch</h4>
                     <ul class="space-y-4 text-sm text-slate-500">
-                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-primary"></i> hello@voxtalent.com</li>
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-primary"></i> +44 (0) 20 7946 0000</li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-primary"></i> contact@voxtalent.com</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-primary"></i> +44 (0) 20 7946 8888</li>
                         <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-primary"></i> Soho, London, UK</li>
                     </ul>
                 </div>
             </div>
 
             <div class="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] sm:text-xs text-slate-500 text-center md:text-left">
-                <p>&copy; 2026 VoxTalent Inc.<span class="hidden sm:inline"> All rights reserved.</span></p>
+                <p>&copy; 2026 VoxTalent.<span class="hidden sm:inline"> All rights reserved.</span></p>
                 <div class="flex flex-wrap justify-center gap-3 sm:gap-8">
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors whitespace-nowrap">Terms of Service</a>

@@ -140,4 +140,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Back to Top
   createBackToTop();
+
+  // FAQ Accordion Toggle
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+  
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const faqItem = toggle.closest('.faq-item');
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Toggle the clicked item
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    });
+  });
 });

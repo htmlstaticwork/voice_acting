@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Theme Management
-  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggles = document.querySelectorAll('#theme-toggle, .theme-toggle');
   const htmlElement = document.documentElement;
 
   // Check for saved theme or system preference
@@ -15,24 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
     htmlElement.classList.add('dark');
   }
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
+  themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
       htmlElement.classList.toggle('dark');
       const isDark = htmlElement.classList.contains('dark');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
-  }
+  });
 
   // RTL Management
-  const rtlToggle = document.getElementById('rtl-toggle');
-  if (rtlToggle) {
-    rtlToggle.addEventListener('click', () => {
+  const rtlToggles = document.querySelectorAll('#rtl-toggle, .rtl-toggle');
+  rtlToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
       const currentDir = htmlElement.getAttribute('dir') || 'ltr';
       const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
       htmlElement.setAttribute('dir', newDir);
       localStorage.setItem('dir', newDir);
     });
-  }
+  });
 
   // Apply saved direction
   const savedDir = localStorage.getItem('dir');

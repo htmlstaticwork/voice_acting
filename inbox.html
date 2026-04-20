@@ -82,6 +82,21 @@
             </a>
         </nav>
         
+        <div class="p-6 border-t border-slate-100 dark:border-slate-800 lg:hidden">
+            <p class="px-4 text-[10px] font-semibold text-slate-400 uppercase tracking-widest mb-4">Appearance</p>
+            <div class="flex items-center gap-3 px-4">
+                <button class="theme-toggle flex-1 flex items-center justify-center gap-2 p-3 bg-slate-50 dark:bg-slate-900 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all border border-slate-200 dark:border-slate-800">
+                    <i data-lucide="moon" class="hidden dark:block w-4 h-4"></i>
+                    <i data-lucide="sun" class="block dark:hidden w-4 h-4"></i>
+                    <span class="text-xs font-semibold">Theme</span>
+                </button>
+                <button class="rtl-toggle flex-1 flex items-center justify-center gap-2 p-3 bg-slate-50 dark:bg-slate-900 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all border border-slate-200 dark:border-slate-800">
+                    <i data-lucide="languages" class="w-4 h-4"></i>
+                    <span class="text-xs font-semibold">RTL</span>
+                </button>
+            </div>
+        </div>
+
         <div class="p-6 border-t border-slate-100 dark:border-slate-800">
             <a href="index.html" class="flex items-center gap-4 px-4 py-3 rounded-xl font-semibold text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-500/10 transition-all">
                 <i data-lucide="log-out" class="w-5 h-5"></i> Logout
@@ -93,13 +108,13 @@
     <div class="flex-1 flex flex-col min-w-0">
         <!-- Top Header -->
         <header class="h-20 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between px-8 z-30">
-            <div class="flex items-center gap-4">
-                <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i data-lucide="menu" class="w-6 h-6"></i></button>
-                <h1 class="text-sm sm:text-base md:text-xl font-semibold font-display whitespace-nowrap">Inbox</h1>
+            <div class="flex items-center gap-2 md:gap-4 min-w-0">
+                <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 shrink-0"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                <h1 class="text-xs sm:text-base md:text-xl font-semibold font-display whitespace-nowrap truncate uppercase tracking-widest sm:normal-case sm:tracking-normal">Inbox</h1>
             </div>
             
             <div class="flex items-center gap-6">
-                <div class="flex items-center gap-2 border-r pr-6 dark:border-slate-800">
+                <div class="hidden lg:flex items-center gap-2 border-r pr-6 dark:border-slate-800">
                     <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle Theme">
                         <i data-lucide="moon" class="hidden dark:block w-5 h-5"></i>
                         <i data-lucide="sun" class="block dark:hidden w-5 h-5"></i>

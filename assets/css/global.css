@@ -405,3 +405,12 @@ html:not([dir="rtl"]) .rtl-only { display: none !important; }
   }
 }
 
+/* Pricing Cards - Center third card in tablet view */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > div:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 400px;
+  }
+}
+
